@@ -93,6 +93,8 @@ final class Pojo_Lightbox_Main {
 		// This plugin for Pojo Themes..
 		if ( ! class_exists( 'Pojo_Maintenance' ) )
 			return;
+
+		load_plugin_textdomain( 'pojo-lightbox', false, basename( dirname( POJO_LIGHTBOX__FILE__ ) ) . '/language' );
 		
 		include( 'classes/pojo-lightbox-admin-ui.php' );
 		
