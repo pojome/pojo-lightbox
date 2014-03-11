@@ -1,10 +1,12 @@
 <?php
 /*
-Plugin Name: Pojo prettyPhoto
-Description:
+Plugin Name: Pojo Lightbox
+Description: This plugin used to add the lightbox (overlay) effect to all images on your WordPress site.
 Author: Pojo Team
 Version: 1.0.0
 Author URI: http://pojo.me/
+Text Domain: pojo-lightbox
+Domain Path: /languages/
 License: GPLv2 or later
 
 
@@ -25,21 +27,23 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-define( 'POJO_PRETTY_PHOTO__FILE__', __FILE__ );
-define( 'POJO_PRETTY_PHOTO_BASE', plugin_basename( POJO_PRETTY_PHOTO__FILE__ ) );
-define( 'POJO_PRETTY_PHOTO_URL', plugins_url( '/', POJO_PRETTY_PHOTO__FILE__ ) );
-define( 'POJO_PRETTY_PHOTO_ASSETS_URL', POJO_PRETTY_PHOTO_URL . 'assets/' );
+define( 'POJO_LIGHTBOX__FILE__', __FILE__ );
+define( 'POJO_LIGHTBOX_BASE', plugin_basename( POJO_LIGHTBOX__FILE__ ) );
+define( 'POJO_LIGHTBOX_URL', plugins_url( '/', POJO_LIGHTBOX__FILE__ ) );
+define( 'POJO_LIGHTBOX_ASSETS_URL', POJO_LIGHTBOX_URL . 'assets/' );
 
-final class Pojo_PrettyPhoto_Main {
+final class Pojo_Lightbox_Main {
 
 	private static $_instance = null;
+	
+	public $admin_ui;
 
 	/**
-	 * @return Pojo_PrettyPhoto_Main
+	 * @return Pojo_Lightbox_Main
 	 */
 	public static function instance() {
 		if ( is_null( self::$_instance ) )
-			self::$_instance = new Pojo_PrettyPhoto_Main();
+			self::$_instance = new Pojo_Lightbox_Main();
 		return self::$_instance;
 	}
 	
@@ -47,9 +51,9 @@ final class Pojo_PrettyPhoto_Main {
 		if ( 'disable' === pojo_get_option( 'lightbox_enable' ) )
 			return;
 		
-		wp_enqueue_style( 'jquery.prettyPhoto', POJO_PRETTY_PHOTO_ASSETS_URL . 'css/prettyPhoto.css' );
+		wp_enqueue_style( 'jquery.prettyPhoto', POJO_LIGHTBOX_ASSETS_URL . 'css/prettyPhoto.css' );
 		
-		wp_register_script( 'jquery.prettyPhoto', POJO_PRETTY_PHOTO_ASSETS_URL . 'js/jquery.prettyPhoto.min.js', array( 'jquery' ), '3.1.5', true );
+		wp_register_script( 'jquery.prettyPhoto', POJO_LIGHTBOX_ASSETS_URL . 'js/jquery.prettyPhoto.min.js', array( 'jquery' ), '3.1.5', true );
 		wp_enqueue_script( 'jquery.prettyPhoto' );
 	}
 	
@@ -81,14 +85,18 @@ final class Pojo_PrettyPhoto_Main {
 	}
 	
 	public function include_settings() {
-		include( 'classes/pojo-pretty-photo-setting-page.php' );
-		new Pojo_PrettyPhoto_Setting_Page( 50 );
+		include( 'classes/pojo-lightbox-setting-page.php' );
+		new Pojo_Lightbox_Setting_Page( 50 );
 	}
 	
 	public function init() {
 		// This plugin for Pojo Themes..
 		if ( ! class_exists( 'Pojo_Maintenance' ) )
 			return;
+		
+		include( 'classes/pojo-lightbox-admin-ui.php' );
+		
+		$this->admin_ui = new Pojo_Lightbox_Admin_UI();
 
 		add_action( 'wp_enqueue_scripts', array( &$this, 'enqueue_scripts' ), 150 );
 		add_action( 'pojo_localize_scripts_array', array( &$this, 'pojo_localize_scripts_array' ) );
@@ -101,6 +109,6 @@ final class Pojo_PrettyPhoto_Main {
 	
 }
 
-Pojo_PrettyPhoto_Main::instance();
+Pojo_Lightbox_Main::instance();
 
 // EOF
