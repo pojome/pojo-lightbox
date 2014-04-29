@@ -1,11 +1,11 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Pojo\n"
+"Project-Id-Version: Pojo Lightbox\n"
 "Report-Msgid-Bugs-To: http://pojo.me/\n"
-"POT-Creation-Date: 2014-03-11 13:57-0000\n"
-"PO-Revision-Date: 2014-03-11 13:57-0000\n"
-"Last-Translator: Yakir Sitbon <kingyes1@gmail.com>\n"
-"Language-Team: Pojo Themes <pojo@gmail.com>\n"
+"POT-Creation-Date: 2014-04-23 12:25+0200\n"
+"PO-Revision-Date: 2014-04-23 12:25+0200\n"
+"Last-Translator: Ariel K <a@arielk.net>\n"
+"Language-Team: Pojo Themes <team@pojo.me>\n"
 "Language: he_IL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -16,7 +16,7 @@ msgstr ""
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.6.4\n"
+"X-Generator: Poedit 1.5.5\n"
 "X-Poedit-SearchPath-0: ..\n"
 
 #: ../classes/pojo-lightbox-admin-ui.php:7
@@ -131,7 +131,7 @@ msgstr "כפתורי שיתוף"
 
 #: ../classes/pojo-lightbox-setting-page.php:89
 msgid "Show social sharing buttons on lightbox"
-msgstr "הצגת כפתורי שיתוך על הלייטבוקס"
+msgstr "הצגת כפתורי שיתוף על הלייטבוקס"
 
 #: ../classes/pojo-lightbox-setting-page.php:99
 msgid "LightBox on Smartphone"
@@ -152,8 +152,10 @@ msgstr "לייטבוקס"
 #: ../language/strings.php:4
 msgid ""
 "This plugin used to add the lightbox (overlay) effect to all images on your "
-"WordPress site."
+"WordPress site with Pojo Framework"
 msgstr ""
+"תוסף זה משמש להוספת אפקט Lightbox על כל התמונות באתר WordPress שעובד עלPojo "
+"Framework."
 
 #~ msgid "404"
 #~ msgstr "שגיאה 404"
