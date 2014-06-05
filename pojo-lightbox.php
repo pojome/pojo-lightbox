@@ -95,7 +95,7 @@ final class Pojo_Lightbox_Main {
 		if ( ! class_exists( 'Pojo_Maintenance' ) )
 			return;
 
-		load_plugin_textdomain( 'pojo-lightbox', false, basename( dirname( POJO_LIGHTBOX__FILE__ ) ) . '/language' );
+		load_plugin_textdomain( 'pojo-lightbox', false, basename( dirname( POJO_LIGHTBOX__FILE__ ) ) . '/languages' );
 		
 		include( 'classes/pojo-lightbox-admin-ui.php' );
 		
