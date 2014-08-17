@@ -89,11 +89,17 @@ final class Pojo_Lightbox_Main {
 		include( 'classes/pojo-lightbox-setting-page.php' );
 		new Pojo_Lightbox_Setting_Page( 50 );
 	}
+
+	public function admin_notices() {
+		echo '<div class="error"><p>' . sprintf( __( '<a href="%s" target="_blank">Pojo Framework</a> is not active. Please activate any theme by Pojo before you are using "Pojo Lightbox" plugin.', 'pojo-lightbox' ), 'http://pojo.me/' ) . '</p></div>';
+	}
 	
-	public function init() {
+	public function bootstrap() {
 		// This plugin for Pojo Themes..
-		if ( ! class_exists( 'Pojo_Maintenance' ) )
+		if ( ! class_exists( 'Pojo_Core' ) ) {
+			add_action( 'admin_notices', array( &$this, 'admin_notices' ) );
 			return;
+		}
 
 		load_plugin_textdomain( 'pojo-lightbox', false, basename( dirname( POJO_LIGHTBOX__FILE__ ) ) . '/languages' );
 		
@@ -107,7 +113,7 @@ final class Pojo_Lightbox_Main {
 	}
 
 	public function __construct() {
-		add_action( 'init', array( &$this, 'init' ) );
+		add_action( 'init', array( &$this, 'bootstrap' ) );
 	}
 	
 }
