@@ -28,7 +28,7 @@ A simple plugin to conveniently add [prettyPhoto lightbox][3] functionality to y
 
 Would you like to like to contribute to Pojo Lightbox? You are more than welcome to submit your pull requests on the [GitHub repo][2]. Also, if you have any notes about the code, please open a ticket on ths issue tracker.
 
- [1]: http://pojo.me
+ [1]: http://pojo.me/?utm_source=wp-repo&utm_medium=link&utm_campaign=lightbox
  [2]: https://github.com/pojome/pojo-lightbox
  [3]: http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone
 
