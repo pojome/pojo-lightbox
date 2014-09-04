@@ -2,8 +2,8 @@
 Contributors: pojo.me, KingYes, ariel.k
 Tags: Lightbox, Image,
 Requires at least: 3.5
-Tested up to: 3.9.2
-Stable tag: 1.0.3
+Tested up to: 4.0
+Stable tag: 1.0.4
 License: GPLv2 or later
 
 This plugin used to add the lightbox (overlay) effect to all images on your WordPress site with Pojo Framework.
@@ -25,7 +25,7 @@ Featured:
 
 Would you like to like to contribute to Pojo Lightbox? You are more than welcome to submit your pull requests on the [GitHub repo][2]. Also, if you have any notes about the code, please open a ticket on ths issue tracker.
 
- [1]: http://pojo.me
+ [1]: http://pojo.me/?utm_source=wp-repo&utm_medium=link&utm_campaign=lightbox
  [2]: https://github.com/pojome/pojo-lightbox
 
 == Installation ==
@@ -65,6 +65,9 @@ Would you like to like to contribute to Pojo Lightbox? You are more than welcome
 </div>
 
 == Changelog ==
+
+= 1.0.4 =
+* Tested up to WordPress v4.0
 
 = 1.0.3 =
 * Initial Public Release!
