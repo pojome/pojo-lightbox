@@ -1,6 +1,6 @@
 === Pojo Lightbox ===
 Contributors: pojo.me, KingYes, ariel.k
-Tags: Lightbox, Image,
+Tags: lightbox, image, allery, images, jquery, media, modal, overlay, prettyphoto, slideshow, PrettyPhoto,
 Requires at least: 3.5
 Tested up to: 4.0
 Stable tag: 1.0.4
@@ -10,15 +10,18 @@ This plugin used to add the lightbox (overlay) effect to all images on your Word
 
 == Description ==
 
-**Please Note: **This plugin is only for [Pojo Framework][1] users - Pojo is a premium themes.
+**Please Note:** This plugin is only for [Pojo Framework][1] users - Pojo is a premium themes.
 
-Featured:
+A simple plugin to conveniently add [prettyPhoto lightbox][3] functionality to your WordPress posts and pages.
+
+**Featured:**
 
 *   6 Styles for Lightbox
 *   Show/Hide image title
 *   Show/Hide share buttons
 *   Show/Hide thumbnails
 *   Enbale/Disable on mobile
+*   Not need to add rel
 *   and more
 
 **Contributions:**
@@ -27,42 +30,24 @@ Would you like to like to contribute to Pojo Lightbox? You are more than welcome
 
  [1]: http://pojo.me/?utm_source=wp-repo&utm_medium=link&utm_campaign=lightbox
  [2]: https://github.com/pojome/pojo-lightbox
+ [3]: http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone
 
 == Installation ==
 
-<div id="section-installation" class="section">
-  Automatic installation
-</div>
+**Automatic installation**
+<ol>
+	<li>Install using WordPress' built-in Add New Plugin installer</li>
+	<li>Activate the plugin through the 'Plugins' menu in WordPress</li>
+	<li>Enjoy!</li>
+</ol>
 
-<div class="section">
-  <br />
-</div>
-
-<div class="section">
-  Install using WordPress' built-in Add New Plugin installer
-</div>
-
-<div class="section">
-  <br />
-</div>
-
-<div class="section">
-  Manual installation<br />
-</div>
-
-<div class="section">
-  <ol>
-    <li>
-      Extract the zip file and just drop the contents in the wp-content/plugins/ directory of your WordPress installation
-    </li>
-    <li>
-      Activate the plugin through the 'Plugins' menu in WordPress
-    </li>
-    <li>
-      Enjoy!
-    </li>
-  </ol>
-</div>
+**Manual installation**
+<ol>
+	<li>Extract the zip file and just drop the contents in the wp-content/plugins/ directory of your WordPress installation</li>
+	<li>Activate the plugin through the 'Plugins' menu in WordPress</li>
+	<li>Enjoy!</li>
+</ol>
+<ol>
 
 == Changelog ==
 
