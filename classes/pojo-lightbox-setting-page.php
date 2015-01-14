@@ -121,7 +121,7 @@ class Pojo_Lightbox_Setting_Page extends Pojo_Settings_Page_Base {
 		$this->_page_title = __( 'Lightbox Settings', 'pojo-lightbox' );
 		$this->_page_menu_title = __( 'Lightbox', 'pojo-lightbox' );
 		$this->_page_type = 'submenu';
-		$this->_page_parent = 'pojo-general';
+		$this->_page_parent = 'pojo-home';
 
 		add_filter( 'pojo_register_settings_sections', array( &$this, 'section_lightbox' ), 100 );
 
