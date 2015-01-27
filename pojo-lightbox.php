@@ -78,9 +78,10 @@ final class Pojo_Lightbox_Main {
 		if ( empty( $lightbox_args['theme'] ) )
 			$lightbox_args['theme'] = 'fast';
 
-		$params['lightbox_enable']     = pojo_get_option( 'lightbox_enable' );
-		$params['lightbox_smartphone'] = pojo_get_option( 'lightbox_smartphone' );
-		$params['lightbox_args']       = $lightbox_args;
+		$params['lightbox_enable']      = pojo_get_option( 'lightbox_enable' );
+		$params['lightbox_smartphone']  = pojo_get_option( 'lightbox_smartphone' );
+		$params['lightbox_woocommerce'] = pojo_get_option( 'lightbox_woocommerce' );
+		$params['lightbox_args']        = $lightbox_args;
 		
 		return $params;
 	}

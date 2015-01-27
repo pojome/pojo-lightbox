@@ -18,44 +18,44 @@ class Pojo_Lightbox_Setting_Page extends Pojo_Settings_Page_Base {
 		);
 
 		$fields[] = array(
-			'id'       => 'lightbox_theme',
-			'title'    => __( 'LightBox Theme', 'pojo-lightbox' ),
+			'id' => 'lightbox_theme',
+			'title' => __( 'LightBox Theme', 'pojo-lightbox' ),
 			'type' => Pojo_Settings::FIELD_SELECT,
 			'desc' => __( '6 Themes to choose from', 'pojo-lightbox' ),
-			'options'  => array(
-				''    => __( 'Default', 'pojo-lightbox' ),
+			'options' => array(
+				'' => __( 'Default', 'pojo-lightbox' ),
 				'light_rounded' => __( 'Light Rounded', 'pojo-lightbox' ),
-				'dark_rounded'  => __( 'Dark Rounded', 'pojo-lightbox' ),
-				'dark_square'   => __( 'Dark Square', 'pojo-lightbox' ),
-				'light_square'  => __( 'Light Square', 'pojo-lightbox' ),
-				'facebook'      => __( 'Facebook', 'pojo-lightbox' ),
+				'dark_rounded' => __( 'Dark Rounded', 'pojo-lightbox' ),
+				'dark_square' => __( 'Dark Square', 'pojo-lightbox' ),
+				'light_square' => __( 'Light Square', 'pojo-lightbox' ),
+				'facebook' => __( 'Facebook', 'pojo-lightbox' ),
 			),
-			'std'      => '',
+			'std' => '',
 		);
 
 		$fields[] = array(
-			'id'       => 'lightbox_animation_speed',
-			'title'    => __( 'Animation Speed', 'pojo-lightbox' ),
+			'id' => 'lightbox_animation_speed',
+			'title' => __( 'Animation Speed', 'pojo-lightbox' ),
 			'type' => Pojo_Settings::FIELD_SELECT,
-			'std'      => '',
-			'options'  => array(
-				''   => __( 'Fast', 'pojo-lightbox' ),
+			'std' => '',
+			'options' => array(
+				'' => __( 'Fast', 'pojo-lightbox' ),
 				'normal' => __( 'Normal', 'pojo-lightbox' ),
-				'slow'   => __( 'Slow', 'pojo-lightbox' ),
+				'slow' => __( 'Slow', 'pojo-lightbox' ),
 			),
 		);
 
 		$fields[] = array(
-			'id'       => 'lightbox_bg_opacity',
-			'title'    => __( 'Background Opacity', 'pojo-lightbox' ),
-			'std'      => '0.80',
+			'id' => 'lightbox_bg_opacity',
+			'title' => __( 'Background Opacity', 'pojo-lightbox' ),
+			'std' => '0.80',
 			'sanitize_callback' => 'floatval',
 		);
 
 		$fields[] = array(
-			'id'       => 'lightbox_show_title',
-			'title'    => __( 'Show Title', 'pojo-lightbox' ),
-			'type'     => Pojo_Settings::FIELD_SELECT,
+			'id' => 'lightbox_show_title',
+			'title' => __( 'Show Title', 'pojo-lightbox' ),
+			'type' => Pojo_Settings::FIELD_SELECT,
 			'options' => array(
 				'show' => __( 'Show', 'pojo-lightbox' ),
 				'' => __( 'Hide', 'pojo-lightbox' ),
@@ -64,9 +64,9 @@ class Pojo_Lightbox_Setting_Page extends Pojo_Settings_Page_Base {
 		);
 
 		$fields[] = array(
-			'id'       => 'lightbox_overlay_gallery',
-			'title'    => __( 'Gallery Thumbnails', 'pojo-lightbox' ),
-			'type'     => Pojo_Settings::FIELD_SELECT,
+			'id' => 'lightbox_overlay_gallery',
+			'title' => __( 'Gallery Thumbnails', 'pojo-lightbox' ),
+			'type' => Pojo_Settings::FIELD_SELECT,
 			'options' => array(
 				'' => __( 'Show', 'pojo-lightbox' ),
 				'hide' => __( 'Hide', 'pojo-lightbox' ),
@@ -75,18 +75,18 @@ class Pojo_Lightbox_Setting_Page extends Pojo_Settings_Page_Base {
 		);
 
 		$fields[] = array(
-			'id'       => 'lightbox_slideshow',
-			'title'    => __( 'Autoplay Gallery Speed', 'pojo-lightbox' ),
+			'id' => 'lightbox_slideshow',
+			'title' => __( 'Autoplay Gallery Speed', 'pojo-lightbox' ),
 			'desc' => __( 'Default: 5000, 1000 ms = 1 second', 'pojo-lightbox' ),
-			'std'      => '5000',
+			'std' => '5000',
 			'sanitize_callback' => array( 'Pojo_Settings_Validations', 'field_number' ),
 		);
 
 		$fields[] = array(
-			'id'       => 'lightbox_social_icons',
-			'title'    => __( 'Social Icons', 'pojo-lightbox' ),
-			'type'     => Pojo_Settings::FIELD_SELECT,
-			'desc'     => __( 'Show social sharing buttons on lightbox', 'pojo-lightbox' ),
+			'id' => 'lightbox_social_icons',
+			'title' => __( 'Social Icons', 'pojo-lightbox' ),
+			'type' => Pojo_Settings::FIELD_SELECT,
+			'desc' => __( 'Show social sharing buttons on lightbox', 'pojo-lightbox' ),
 			'options' => array(
 				'' => __( 'Show', 'pojo-lightbox' ),
 				'hide' => __( 'Hide', 'pojo-lightbox' ),
@@ -95,15 +95,28 @@ class Pojo_Lightbox_Setting_Page extends Pojo_Settings_Page_Base {
 		);
 
 		$fields[] = array(
-			'id'       => 'lightbox_smartphone',
-			'title'    => __( 'LightBox on Smartphone', 'pojo-lightbox' ),
-			'type'     => Pojo_Settings::FIELD_SELECT,
+			'id' => 'lightbox_smartphone',
+			'title' => __( 'LightBox on Smartphone', 'pojo-lightbox' ),
+			'type' => Pojo_Settings::FIELD_SELECT,
 			'options' => array(
 				'' => __( 'Enable', 'pojo-lightbox' ),
 				'disable' => __( 'Disable', 'pojo-lightbox' ),
 			),
 			'std' => '',
 		);
+
+		if ( Pojo_Compatibility::is_woocommerce_installed() ) {
+			$fields[] = array(
+				'id' => 'lightbox_woocommerce',
+				'title' => __( 'LightBox on WooCommerce', 'pojo-lightbox' ),
+				'type' => Pojo_Settings::FIELD_SELECT,
+				'options' => array(
+					'' => __( 'Enable', 'pojo-lightbox' ),
+					'disable' => __( 'Disable', 'pojo-lightbox' ),
+				),
+				'std' => '',
+			);
+		}
 
 		$sections[] = array(
 			'id' => 'section-lightbox',
