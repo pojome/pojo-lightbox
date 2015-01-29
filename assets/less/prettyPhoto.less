@@ -18,13 +18,20 @@ div.pp_default .pp_bottom .pp_left,
 div.pp_default .pp_bottom .pp_middle,
 div.pp_default .pp_bottom .pp_right { height: 13px; }
 
-div.pp_default .pp_top .pp_left { background: url(../themes/default/sprite.png) -78px -93px no-repeat; } /* Top left corner */
-div.pp_default .pp_top .pp_middle { background: url(../themes/default/sprite_x.png) top left repeat-x; } /* Top pattern/color */
-div.pp_default .pp_top .pp_right { background: url(../themes/default/sprite.png) -112px -93px no-repeat; } /* Top right corner */
+div.pp_default {
+	.pp_top .pp_left,
+	.pp_top .pp_middle,
+	.pp_top .pp_right,
+	.pp_bottom .pp_left,
+	.pp_bottom .pp_middle,
+	.pp_bottom .pp_right {
+		background: #FFFFFF;
+	}
+}
 
 div.pp_default .pp_content .ppt { color: #f8f8f8; }
-div.pp_default .pp_content_container .pp_left { background: url(../themes/default/sprite_y.png) -7px 0 repeat-y; padding-left: 13px; }
-div.pp_default .pp_content_container .pp_right { background: url(../themes/default/sprite_y.png) top right repeat-y; padding-right: 13px; }
+div.pp_default .pp_content_container .pp_left { background: #FFFFFF; padding-left: 13px; }
+div.pp_default .pp_content_container .pp_right { background: #FFFFFF; padding-right: 13px; }
 div.pp_default .pp_content { background-color: #fff; } /* Content background */
 div.pp_default .pp_next:hover { background: url(../themes/default/sprite_next.png) center right  no-repeat; cursor: pointer; } /* Next button */
 div.pp_default .pp_previous:hover { background: url(../themes/default/sprite_prev.png) center left no-repeat; cursor: pointer; } /* Previous button */
@@ -55,10 +62,6 @@ div.pp_default .pp_nav .currentTextHolder{ font-family: Georgia; font-style: ita
 div.pp_default .pp_close:hover, div.pp_default .pp_nav .pp_play:hover, div.pp_default .pp_nav .pp_pause:hover, div.pp_default .pp_arrow_next:hover, div.pp_default .pp_arrow_previous:hover { opacity:0.7; }
 
 div.pp_default .pp_description{ font-size: 11px; font-weight: bold; line-height: 14px; margin: 5px 50px 5px 0; }
-
-div.pp_default .pp_bottom .pp_left { background: url(../themes/default/sprite.png) -78px -127px no-repeat; } /* Bottom left corner */
-div.pp_default .pp_bottom .pp_middle { background: url(../themes/default/sprite_x.png) bottom left repeat-x; } /* Bottom pattern/color */
-div.pp_default .pp_bottom .pp_right { background: url(../themes/default/sprite.png) -112px -127px no-repeat; } /* Bottom right corner */
 
 div.pp_default .pp_loaderIcon { background: url(../themes/default/loader.gif) center center no-repeat; } /* Loader icon */
 
@@ -264,14 +267,14 @@ div.pp_overlay {
 	position: absolute;
 	top: 0;
 	width: 100%;
-	z-index: 9500;
+	z-index: 10000;
 }
 
 div.pp_pic_holder {
 	display: none;
 	position: absolute;
 	width: 100px;
-	z-index: 10000;
+	z-index: 10001;
 }
 
 
