@@ -35,6 +35,7 @@
 			callback: function(){}, /* Called when prettyPhoto is closed */
 			ie6_fallback: true,
 			markup: '<div class="pp_pic_holder"> \
+						<div class="ppt">&nbsp;</div> \
 						<div class="pp_top"> \
 							<div class="pp_left"></div> \
 							<div class="pp_middle"></div> \
@@ -59,7 +60,6 @@
 												<a href="#" class="pp_arrow_next">Next</a> \
 											</div> \
 											<p class="pp_description"></p> \
-											<div class="ppt">&nbsp;</div> \
 											<div class="pp_social">{pp_social}</div> \
 											<a class="pp_close" href="#">Close</a> \
 										</div> \
