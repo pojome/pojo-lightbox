@@ -75,8 +75,8 @@ final class Pojo_Lightbox_Main {
 		if ( empty( $lightbox_args['theme'] ) )
 			$lightbox_args['theme'] = 'pp_default';
 
-		if ( empty( $lightbox_args['theme'] ) )
-			$lightbox_args['theme'] = 'fast';
+		if ( empty( $lightbox_args['animation_speed'] ) )
+			$lightbox_args['animation_speed'] = 'fast';
 
 		$params['lightbox_enable']      = pojo_get_option( 'lightbox_enable' );
 		$params['lightbox_smartphone']  = pojo_get_option( 'lightbox_smartphone' );
