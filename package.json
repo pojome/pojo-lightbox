@@ -1,0 +1,21 @@
+{
+	"name": "pojo-lightbox",
+	"slug": "pojo-lightbox",
+	"homepage": "http://pojo.me/",
+	"description": "",
+	"version": "1.0.6",
+	"devDependencies": {
+		"grunt": "~0.4.1",
+		"grunt-checktextdomain": "~0.1.1",
+		"grunt-pot": "~0.1.2",
+		"grunt-contrib-jshint": "~0.10.0",
+		"grunt-contrib-watch": "~0.6.1",
+		"grunt-contrib-uglify": "~0.5.1",
+		"grunt-banner": "~0.2.0",
+		"grunt-bumpup": "~0.6.1",
+		"grunt-shell": "~1.1.1",
+		"grunt-text-replace": "~0.3.6",
+		"grunt-release": "~0.7.0",
+		"matchdep": "~0.3.0"
+	}
+}

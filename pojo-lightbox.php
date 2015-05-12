@@ -62,12 +62,15 @@ final class Pojo_Lightbox_Main {
 			wp_register_script( 'jquery.magnific-popup', POJO_LIGHTBOX_ASSETS_URL . 'magnific-popup/jquery.magnific-popup.min.js', array( 'jquery' ), '1.0.0', true );
 			wp_enqueue_script( 'jquery.magnific-popup' );
 		}
-	}
-	
-	public function pojo_localize_scripts_array( $params = array() ) {
-		$lightbox_args = array();
-		$lightbox_script = pojo_get_option( 'lightbox_script' );
+
+		wp_register_script( 'pojo-lightbox-app', POJO_LIGHTBOX_ASSETS_URL . 'js/app.min.js', array( 'jquery' ), false, true );
+		wp_enqueue_script( 'pojo-lightbox-app' );
 		
+		$this->localize_scripts( $lightbox_script );
+	}
+
+	public function localize_scripts( $lightbox_script ) {
+		$params = $lightbox_args = array();
 		if ( 'prettyPhoto' == $lightbox_script ) {
 			$lightbox_args = array(
 				'theme'           => pojo_get_option( 'lightbox_theme' ),
@@ -86,15 +89,22 @@ final class Pojo_Lightbox_Main {
 				$lightbox_args['theme'] = 'pp_default';
 
 			if ( empty( $lightbox_args['animation_speed'] ) )
-				$lightbox_args['animation_speed'] = 'fast';	
+				$lightbox_args['animation_speed'] = 'fast';
 		}
 
-		$params['lightbox_script']      = $lightbox_script;
-		$params['lightbox_smartphone']  = pojo_get_option( 'lightbox_smartphone' );
-		$params['lightbox_woocommerce'] = pojo_get_option( 'lightbox_woocommerce' );
-		$params['lightbox_args']        = $lightbox_args;
+		$params['script_type']   = $lightbox_script;
+		$params['smartphone']    = pojo_get_option( 'lightbox_smartphone' );
+		$params['woocommerce']   = pojo_get_option( 'lightbox_woocommerce' );
+		$params['lightbox_args'] = $lightbox_args;
 		
-		return $params;
+		wp_localize_script(
+			'pojo-lightbox-app',
+			'PojoLightboxOptions',
+			apply_filters(
+				'pojo_lightbox_localize_scripts_array',
+				$params
+			)
+		);
 	}
 	
 	public function include_settings() {
@@ -120,7 +130,6 @@ final class Pojo_Lightbox_Main {
 		$this->admin_ui = new Pojo_Lightbox_Admin_UI();
 
 		add_action( 'wp_enqueue_scripts', array( &$this, 'enqueue_scripts' ), 150 );
-		add_action( 'pojo_localize_scripts_array', array( &$this, 'pojo_localize_scripts_array' ) );
 		add_action( 'pojo_framework_base_settings_included', array( &$this, 'include_settings' ) );
 	}
 

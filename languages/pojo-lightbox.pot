@@ -1,0 +1,173 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pojo-lightbox 1.0.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-05-12 17:39+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: classes/pojo-lightbox-admin-ui.php:7
+msgid "GitHub"
+msgstr ""
+
+#: classes/pojo-lightbox-admin-ui.php:10
+msgid "Settings"
+msgstr ""
+
+#: classes/pojo-lightbox-setting-page.php:11
+msgid "LightBox Script"
+msgstr ""
+
+#: classes/pojo-lightbox-setting-page.php:14
+msgid "Magnific Popup"
+msgstr ""
+
+#: classes/pojo-lightbox-setting-page.php:15
+msgid "prettyPhoto"
+msgstr ""
+
+#: classes/pojo-lightbox-setting-page.php:28
+msgid "Lightbox:"
+msgstr ""
+
+#: classes/pojo-lightbox-setting-page.php:42
+msgid "LightBox Theme"
+msgstr ""
+
+#: classes/pojo-lightbox-setting-page.php:44
+msgid "6 Themes to choose from"
+msgstr ""
+
+#: classes/pojo-lightbox-setting-page.php:47
+msgid "Default"
+msgstr ""
+
+#: classes/pojo-lightbox-setting-page.php:48
+msgid "Light Rounded"
+msgstr ""
+
+#: classes/pojo-lightbox-setting-page.php:49
+msgid "Dark Rounded"
+msgstr ""
+
+#: classes/pojo-lightbox-setting-page.php:50
+msgid "Dark Square"
+msgstr ""
+
+#: classes/pojo-lightbox-setting-page.php:51
+msgid "Light Square"
+msgstr ""
+
+#: classes/pojo-lightbox-setting-page.php:52
+msgid "Facebook"
+msgstr ""
+
+#: classes/pojo-lightbox-setting-page.php:59
+msgid "Animation Speed"
+msgstr ""
+
+#: classes/pojo-lightbox-setting-page.php:64
+msgid "Fast"
+msgstr ""
+
+#: classes/pojo-lightbox-setting-page.php:65
+msgid "Normal"
+msgstr ""
+
+#: classes/pojo-lightbox-setting-page.php:66
+msgid "Slow"
+msgstr ""
+
+#: classes/pojo-lightbox-setting-page.php:72
+msgid "Background Opacity"
+msgstr ""
+
+#: classes/pojo-lightbox-setting-page.php:80
+msgid "Show Title"
+msgstr ""
+
+#: classes/pojo-lightbox-setting-page.php:84
+#: classes/pojo-lightbox-setting-page.php:96
+#: classes/pojo-lightbox-setting-page.php:118
+msgid "Show"
+msgstr ""
+
+#: classes/pojo-lightbox-setting-page.php:85
+#: classes/pojo-lightbox-setting-page.php:97
+#: classes/pojo-lightbox-setting-page.php:119
+msgid "Hide"
+msgstr ""
+
+#: classes/pojo-lightbox-setting-page.php:92
+msgid "Gallery Thumbnails"
+msgstr ""
+
+#: classes/pojo-lightbox-setting-page.php:104
+msgid "Autoplay Gallery Speed"
+msgstr ""
+
+#: classes/pojo-lightbox-setting-page.php:105
+msgid "Default: 5000, 1000 ms = 1 second"
+msgstr ""
+
+#: classes/pojo-lightbox-setting-page.php:113
+msgid "Social Icons"
+msgstr ""
+
+#: classes/pojo-lightbox-setting-page.php:115
+msgid "Show social sharing buttons on lightbox"
+msgstr ""
+
+#: classes/pojo-lightbox-setting-page.php:133
+msgid "Test Field for Other script"
+msgstr ""
+
+#: classes/pojo-lightbox-setting-page.php:146
+msgid "LightBox on Smartphone"
+msgstr ""
+
+#: classes/pojo-lightbox-setting-page.php:149
+#: classes/pojo-lightbox-setting-page.php:161
+msgid "Enable"
+msgstr ""
+
+#: classes/pojo-lightbox-setting-page.php:150
+#: classes/pojo-lightbox-setting-page.php:162
+msgid "Disable"
+msgstr ""
+
+#: classes/pojo-lightbox-setting-page.php:158
+msgid "LightBox on WooCommerce"
+msgstr ""
+
+#: classes/pojo-lightbox-setting-page.php:192
+msgid "Lightbox Settings"
+msgstr ""
+
+#: classes/pojo-lightbox-setting-page.php:193
+msgid "Lightbox"
+msgstr ""
+
+#: languages/strings.php:4
+msgid ""
+"This plugin used to add the lightbox (overlay) effect to all images on your "
+"WordPress site with Pojo Framework"
+msgstr ""
+
+#: pojo-lightbox.php:116
+#, php-format
+msgid ""
+"<a href=\"%s\" target=\"_blank\">Pojo Framework</a> is not active. Please "
+"activate any theme by Pojo before you are using \"Pojo Lightbox\" plugin."
+msgstr ""
