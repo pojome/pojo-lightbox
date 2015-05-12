@@ -49,36 +49,47 @@ final class Pojo_Lightbox_Main {
 	}
 	
 	public function enqueue_scripts() {
-		if ( 'disable' === pojo_get_option( 'lightbox_enable' ) )
-			return;
-		
-		wp_enqueue_style( 'jquery.prettyPhoto', POJO_LIGHTBOX_ASSETS_URL . 'css/prettyPhoto.css' );
-		
-		wp_register_script( 'jquery.prettyPhoto', POJO_LIGHTBOX_ASSETS_URL . 'js/jquery.prettyPhoto.min.js', array( 'jquery' ), '3.1.5', true );
-		wp_enqueue_script( 'jquery.prettyPhoto' );
+		$lightbox_script = pojo_get_option( 'lightbox_script' );
+
+		if ( 'prettyPhoto' == $lightbox_script ) {
+			wp_enqueue_style( 'jquery.prettyPhoto', POJO_LIGHTBOX_ASSETS_URL . 'prettyPhoto/css/prettyPhoto.css' );
+
+			wp_register_script( 'jquery.prettyPhoto', POJO_LIGHTBOX_ASSETS_URL . 'prettyPhoto/js/jquery.prettyPhoto.min.js', array( 'jquery' ), '3.1.5', true );
+			wp_enqueue_script( 'jquery.prettyPhoto' );
+		} elseif ( 'magnific' === $lightbox_script ) {
+			wp_enqueue_style( 'jquery.magnific-popup', POJO_LIGHTBOX_ASSETS_URL . 'magnific-popup/magnific-popup.css' );
+
+			wp_register_script( 'jquery.magnific-popup', POJO_LIGHTBOX_ASSETS_URL . 'magnific-popup/jquery.magnific-popup.min.js', array( 'jquery' ), '1.0.0', true );
+			wp_enqueue_script( 'jquery.magnific-popup' );
+		}
 	}
 	
 	public function pojo_localize_scripts_array( $params = array() ) {
-		$lightbox_args = array(
-			'theme'           => pojo_get_option( 'lightbox_theme' ),
-			'animation_speed' => pojo_get_option( 'lightbox_animation_speed' ),
-			'overlay_gallery' => ( 'hide' !== pojo_get_option( 'lightbox_overlay_gallery' ) ),
-			'slideshow'       => floatval( pojo_get_option( 'lightbox_slideshow' ) ),
-			'opacity'         => floatval( pojo_get_option( 'lightbox_bg_opacity' ) ),
-			'show_title'      => ( 'show' === pojo_get_option( 'lightbox_show_title' ) ),
-			'deeplinking'     => false,
-		);
+		$lightbox_args = array();
+		$lightbox_script = pojo_get_option( 'lightbox_script' );
+		
+		if ( 'prettyPhoto' == $lightbox_script ) {
+			$lightbox_args = array(
+				'theme'           => pojo_get_option( 'lightbox_theme' ),
+				'animation_speed' => pojo_get_option( 'lightbox_animation_speed' ),
+				'overlay_gallery' => ( 'hide' !== pojo_get_option( 'lightbox_overlay_gallery' ) ),
+				'slideshow'       => floatval( pojo_get_option( 'lightbox_slideshow' ) ),
+				'opacity'         => floatval( pojo_get_option( 'lightbox_bg_opacity' ) ),
+				'show_title'      => ( 'show' === pojo_get_option( 'lightbox_show_title' ) ),
+				'deeplinking'     => false,
+			);
 
-		if ( 'hide' === pojo_get_option( 'lightbox_social_icons' ) )
-			$lightbox_args['social_tools'] = '';
+			if ( 'hide' === pojo_get_option( 'lightbox_social_icons' ) )
+				$lightbox_args['social_tools'] = '';
 
-		if ( empty( $lightbox_args['theme'] ) )
-			$lightbox_args['theme'] = 'pp_default';
+			if ( empty( $lightbox_args['theme'] ) )
+				$lightbox_args['theme'] = 'pp_default';
 
-		if ( empty( $lightbox_args['animation_speed'] ) )
-			$lightbox_args['animation_speed'] = 'fast';
+			if ( empty( $lightbox_args['animation_speed'] ) )
+				$lightbox_args['animation_speed'] = 'fast';	
+		}
 
-		$params['lightbox_enable']      = pojo_get_option( 'lightbox_enable' );
+		$params['lightbox_script']      = $lightbox_script;
 		$params['lightbox_smartphone']  = pojo_get_option( 'lightbox_smartphone' );
 		$params['lightbox_woocommerce'] = pojo_get_option( 'lightbox_woocommerce' );
 		$params['lightbox_args']        = $lightbox_args;
