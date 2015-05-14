@@ -122,8 +122,12 @@
 				},
 
 				_getThumbBoundsFn = function( index, items ) {
-					var thumbnail = items[index].el.children[0],
-						pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
+					var thumbnail = items[index].el.children[0];
+					if ( undefined === thumbnail ) {
+						return null;
+					}
+					
+					var pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
 						rect = thumbnail.getBoundingClientRect();
 
 					return {x: rect.left, y: rect.top + pageYScroll, w: rect.width};
@@ -175,7 +179,7 @@
 			} );
 			
 			// WordPress Gallery
-			$( 'div.gallery' ).each( function() {
+			$( 'div.gallery, div.pojo-gallery' ).each( function() {
 				var $thisGallery = $( this ),
 					
 					_getItems = function() {
@@ -203,15 +207,15 @@
 					options = $.extend( {}, globalOptions, options );
 					var gallery = new PhotoSwipe( $photosWipeTemplate, PhotoSwipeUI_Default, items, options );
 					gallery.listen( 'gettingData', function( index, item ) {
-						if ( item.w < 1 || item.h < 1 ) { // unknown size
+						if ( item.w < 1 || item.h < 1 ) {
 							var img = new Image();
-							img.onload = function() { // will get size after load
-								item.w = this.width; // set image width
-								item.h = this.height; // set image height
-								gallery.invalidateCurrItems(); // reinit Items
-								gallery.updateSize( true ); // reinit Items
+							img.onload = function() {
+								item.w = this.width;
+								item.h = this.height;
+								gallery.invalidateCurrItems();
+								gallery.updateSize( true );
 							};
-							img.src = item.src; // let's download image
+							img.src = item.src;
 						}
 					} );
 					gallery.init();
