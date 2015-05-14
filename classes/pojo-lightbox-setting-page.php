@@ -206,6 +206,102 @@ class Pojo_Lightbox_Setting_Page extends Pojo_Settings_Page_Base {
 			),
 			'std' => '',
 		);
+
+		$fields[] = array(
+			'id' => 'photoswipe_show_caption',
+			'title' => __( 'Caption', 'pojo-lightbox' ),
+			'type' => Pojo_Settings::FIELD_SELECT,
+			'class' => $wrapper_classes,
+			'options' => array(
+				'' => __( 'Show', 'pojo-lightbox' ),
+				'hide' => __( 'Hide', 'pojo-lightbox' ),
+			),
+			'std' => '',
+		);
+
+		$fields[] = array(
+			'id' => 'photoswipe_show_close_button',
+			'title' => __( 'Close Button', 'pojo-lightbox' ),
+			'type' => Pojo_Settings::FIELD_SELECT,
+			'class' => $wrapper_classes,
+			'options' => array(
+				'' => __( 'Show', 'pojo-lightbox' ),
+				'hide' => __( 'Hide', 'pojo-lightbox' ),
+			),
+			'std' => '',
+		);
+
+		$fields[] = array(
+			'id' => 'photoswipe_show_fullscreen_button',
+			'title' => __( 'FullScreen Button', 'pojo-lightbox' ),
+			'type' => Pojo_Settings::FIELD_SELECT,
+			'class' => $wrapper_classes,
+			'options' => array(
+				'' => __( 'Show', 'pojo-lightbox' ),
+				'hide' => __( 'Hide', 'pojo-lightbox' ),
+			),
+			'std' => '',
+		);
+
+		$fields[] = array(
+			'id' => 'photoswipe_show_zoom_button',
+			'title' => __( 'Zoom Button', 'pojo-lightbox' ),
+			'type' => Pojo_Settings::FIELD_SELECT,
+			'class' => $wrapper_classes,
+			'options' => array(
+				'' => __( 'Show', 'pojo-lightbox' ),
+				'hide' => __( 'Hide', 'pojo-lightbox' ),
+			),
+			'std' => '',
+		);
+
+		$fields[] = array(
+			'id' => 'photoswipe_show_image_counter',
+			'title' => __( 'Image Counter', 'pojo-lightbox' ),
+			'type' => Pojo_Settings::FIELD_SELECT,
+			'class' => $wrapper_classes,
+			'options' => array(
+				'' => __( 'Show', 'pojo-lightbox' ),
+				'hide' => __( 'Hide', 'pojo-lightbox' ),
+			),
+			'std' => '',
+		);
+		
+		$fields[] = array(
+			'id' => 'photoswipe_show_arrows',
+			'title' => __( 'Arrow Navigation', 'pojo-lightbox' ),
+			'type' => Pojo_Settings::FIELD_SELECT,
+			'class' => $wrapper_classes,
+			'options' => array(
+				'' => __( 'Show', 'pojo-lightbox' ),
+				'hide' => __( 'Hide', 'pojo-lightbox' ),
+			),
+			'std' => '',
+		);
+		
+		$fields[] = array(
+			'id' => 'photoswipe_show_share_button',
+			'title' => __( 'Share Button', 'pojo-lightbox' ),
+			'type' => Pojo_Settings::FIELD_SELECT,
+			'class' => $wrapper_classes,
+			'options' => array(
+				'' => __( 'Show', 'pojo-lightbox' ),
+				'hide' => __( 'Hide', 'pojo-lightbox' ),
+			),
+			'std' => '',
+		);
+		
+		$fields[] = array(
+			'id' => 'photoswipe_show_image_preloader',
+			'title' => __( 'Image Preloader', 'pojo-lightbox' ),
+			'type' => Pojo_Settings::FIELD_SELECT,
+			'class' => $wrapper_classes,
+			'options' => array(
+				'' => __( 'Show', 'pojo-lightbox' ),
+				'hide' => __( 'Hide', 'pojo-lightbox' ),
+			),
+			'std' => '',
+		);
 		
 		return $fields;
 	}

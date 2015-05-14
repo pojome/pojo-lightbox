@@ -114,6 +114,14 @@ final class Pojo_Lightbox_Main {
 				'escKey' => ( 'disable' !== pojo_get_option( 'photoswipe_esc_key' ) ),
 				'arrowKeys' => ( 'disable' !== pojo_get_option( 'photoswipe_arrow_keys' ) ),
 				'history' => ( 'disable' !== pojo_get_option( 'photoswipe_history' ) ),
+				'captionEl' => ( 'hide' !== pojo_get_option( 'photoswipe_show_caption' ) ),
+				'closeEl' => ( 'hide' !== pojo_get_option( 'photoswipe_show_close_button' ) ),
+				'fullscreenEl' => ( 'hide' !== pojo_get_option( 'photoswipe_show_fullscreen_button' ) ),
+				'zoomEl' => ( 'hide' !== pojo_get_option( 'photoswipe_show_zoom_button' ) ),
+				'counterEl' => ( 'hide' !== pojo_get_option( 'photoswipe_show_image_counter' ) ),
+				'arrowEl' => ( 'hide' !== pojo_get_option( 'photoswipe_show_arrows' ) ),
+				'shareEl' => ( 'hide' !== pojo_get_option( 'photoswipe_show_share_button' ) ),
+				'preloaderEl' => ( 'hide' !== pojo_get_option( 'photoswipe_show_image_preloader' ) ),
 			);
 		}
 
