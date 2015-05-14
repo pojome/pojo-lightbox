@@ -183,7 +183,7 @@ class Pojo_Lightbox_Setting_Page extends Pojo_Settings_Page_Base {
 		
 		$fields[] = array(
 			'id' => 'photoswipe_arrow_keys',
-			'title' => __( 'Esc Key', 'pojo-lightbox' ),
+			'title' => __( 'Arrow Key', 'pojo-lightbox' ),
 			'type' => Pojo_Settings::FIELD_SELECT,
 			'desc' => __( 'Keyboard left or right arrow key navigation.', 'pojo-lightbox' ),
 			'class' => $wrapper_classes,

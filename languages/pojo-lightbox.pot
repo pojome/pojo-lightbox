@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pojo-lightbox 1.0.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-12 17:39+0300\n"
+"POT-Creation-Date: 2015-05-14 08:38+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,132 +30,201 @@ msgid "LightBox Script"
 msgstr ""
 
 #: classes/pojo-lightbox-setting-page.php:14
-msgid "Magnific Popup"
+msgid "PhotoSwipe"
 msgstr ""
 
 #: classes/pojo-lightbox-setting-page.php:15
+msgid "Magnific Popup"
+msgstr ""
+
+#: classes/pojo-lightbox-setting-page.php:16
 msgid "prettyPhoto"
 msgstr ""
 
-#: classes/pojo-lightbox-setting-page.php:28
+#: classes/pojo-lightbox-setting-page.php:29
 msgid "Lightbox:"
 msgstr ""
 
-#: classes/pojo-lightbox-setting-page.php:42
+#: classes/pojo-lightbox-setting-page.php:43
 msgid "LightBox Theme"
 msgstr ""
 
-#: classes/pojo-lightbox-setting-page.php:44
+#: classes/pojo-lightbox-setting-page.php:45
 msgid "6 Themes to choose from"
 msgstr ""
 
-#: classes/pojo-lightbox-setting-page.php:47
+#: classes/pojo-lightbox-setting-page.php:48
 msgid "Default"
 msgstr ""
 
-#: classes/pojo-lightbox-setting-page.php:48
+#: classes/pojo-lightbox-setting-page.php:49
 msgid "Light Rounded"
 msgstr ""
 
-#: classes/pojo-lightbox-setting-page.php:49
+#: classes/pojo-lightbox-setting-page.php:50
 msgid "Dark Rounded"
 msgstr ""
 
-#: classes/pojo-lightbox-setting-page.php:50
+#: classes/pojo-lightbox-setting-page.php:51
 msgid "Dark Square"
 msgstr ""
 
-#: classes/pojo-lightbox-setting-page.php:51
+#: classes/pojo-lightbox-setting-page.php:52
 msgid "Light Square"
 msgstr ""
 
-#: classes/pojo-lightbox-setting-page.php:52
+#: classes/pojo-lightbox-setting-page.php:53
 msgid "Facebook"
 msgstr ""
 
-#: classes/pojo-lightbox-setting-page.php:59
+#: classes/pojo-lightbox-setting-page.php:60
 msgid "Animation Speed"
 msgstr ""
 
-#: classes/pojo-lightbox-setting-page.php:64
+#: classes/pojo-lightbox-setting-page.php:65
 msgid "Fast"
 msgstr ""
 
-#: classes/pojo-lightbox-setting-page.php:65
+#: classes/pojo-lightbox-setting-page.php:66
 msgid "Normal"
 msgstr ""
 
-#: classes/pojo-lightbox-setting-page.php:66
+#: classes/pojo-lightbox-setting-page.php:67
 msgid "Slow"
 msgstr ""
 
-#: classes/pojo-lightbox-setting-page.php:72
+#: classes/pojo-lightbox-setting-page.php:73
 msgid "Background Opacity"
 msgstr ""
 
-#: classes/pojo-lightbox-setting-page.php:80
+#: classes/pojo-lightbox-setting-page.php:81
 msgid "Show Title"
-msgstr ""
-
-#: classes/pojo-lightbox-setting-page.php:84
-#: classes/pojo-lightbox-setting-page.php:96
-#: classes/pojo-lightbox-setting-page.php:118
-msgid "Show"
 msgstr ""
 
 #: classes/pojo-lightbox-setting-page.php:85
 #: classes/pojo-lightbox-setting-page.php:97
 #: classes/pojo-lightbox-setting-page.php:119
+msgid "Show"
+msgstr ""
+
+#: classes/pojo-lightbox-setting-page.php:86
+#: classes/pojo-lightbox-setting-page.php:98
+#: classes/pojo-lightbox-setting-page.php:120
 msgid "Hide"
 msgstr ""
 
-#: classes/pojo-lightbox-setting-page.php:92
+#: classes/pojo-lightbox-setting-page.php:93
 msgid "Gallery Thumbnails"
 msgstr ""
 
-#: classes/pojo-lightbox-setting-page.php:104
+#: classes/pojo-lightbox-setting-page.php:105
 msgid "Autoplay Gallery Speed"
 msgstr ""
 
-#: classes/pojo-lightbox-setting-page.php:105
+#: classes/pojo-lightbox-setting-page.php:106
 msgid "Default: 5000, 1000 ms = 1 second"
 msgstr ""
 
-#: classes/pojo-lightbox-setting-page.php:113
+#: classes/pojo-lightbox-setting-page.php:114
 msgid "Social Icons"
 msgstr ""
 
-#: classes/pojo-lightbox-setting-page.php:115
+#: classes/pojo-lightbox-setting-page.php:116
 msgid "Show social sharing buttons on lightbox"
 msgstr ""
 
-#: classes/pojo-lightbox-setting-page.php:133
-msgid "Test Field for Other script"
+#: classes/pojo-lightbox-setting-page.php:134
+msgid "Loop"
 msgstr ""
 
-#: classes/pojo-lightbox-setting-page.php:146
-msgid "LightBox on Smartphone"
+#: classes/pojo-lightbox-setting-page.php:136
+msgid ""
+"Loop slides when using swipe gesture. If set to `enable` you'll be able to "
+"swipe from last to first image. Option is always `disable` when there are "
+"less than 3 slides."
 msgstr ""
 
-#: classes/pojo-lightbox-setting-page.php:149
-#: classes/pojo-lightbox-setting-page.php:161
+#: classes/pojo-lightbox-setting-page.php:139
+#: classes/pojo-lightbox-setting-page.php:152
+#: classes/pojo-lightbox-setting-page.php:165
+#: classes/pojo-lightbox-setting-page.php:178
+#: classes/pojo-lightbox-setting-page.php:191
+#: classes/pojo-lightbox-setting-page.php:204
+#: classes/pojo-lightbox-setting-page.php:221
+#: classes/pojo-lightbox-setting-page.php:233
 msgid "Enable"
 msgstr ""
 
-#: classes/pojo-lightbox-setting-page.php:150
-#: classes/pojo-lightbox-setting-page.php:162
+#: classes/pojo-lightbox-setting-page.php:140
+#: classes/pojo-lightbox-setting-page.php:153
+#: classes/pojo-lightbox-setting-page.php:166
+#: classes/pojo-lightbox-setting-page.php:179
+#: classes/pojo-lightbox-setting-page.php:192
+#: classes/pojo-lightbox-setting-page.php:205
+#: classes/pojo-lightbox-setting-page.php:222
+#: classes/pojo-lightbox-setting-page.php:234
 msgid "Disable"
 msgstr ""
 
-#: classes/pojo-lightbox-setting-page.php:158
+#: classes/pojo-lightbox-setting-page.php:147
+msgid "Close on Scroll"
+msgstr ""
+
+#: classes/pojo-lightbox-setting-page.php:149
+msgid ""
+"Close gallery on page scroll. Option works just for devices without hardware "
+"touch support."
+msgstr ""
+
+#: classes/pojo-lightbox-setting-page.php:160
+msgid "Close on Vertical Drag"
+msgstr ""
+
+#: classes/pojo-lightbox-setting-page.php:162
+msgid ""
+"Close gallery when dragging vertically and when image is not zoomed. Always "
+"`disable` when mouse is used."
+msgstr ""
+
+#: classes/pojo-lightbox-setting-page.php:173
+msgid "Esc Key"
+msgstr ""
+
+#: classes/pojo-lightbox-setting-page.php:175
+msgid "Esc keyboard key to close Lightbox"
+msgstr ""
+
+#: classes/pojo-lightbox-setting-page.php:186
+msgid "Arrow Key"
+msgstr ""
+
+#: classes/pojo-lightbox-setting-page.php:188
+msgid "Keyboard left or right arrow key navigation."
+msgstr ""
+
+#: classes/pojo-lightbox-setting-page.php:199
+msgid "History"
+msgstr ""
+
+#: classes/pojo-lightbox-setting-page.php:201
+msgid ""
+"If set to `disable` disables history module (back button to close gallery, "
+"unique URL for each slide)."
+msgstr ""
+
+#: classes/pojo-lightbox-setting-page.php:218
+msgid "LightBox on Smartphone"
+msgstr ""
+
+#: classes/pojo-lightbox-setting-page.php:230
 msgid "LightBox on WooCommerce"
 msgstr ""
 
-#: classes/pojo-lightbox-setting-page.php:192
+#: classes/pojo-lightbox-setting-page.php:264
 msgid "Lightbox Settings"
 msgstr ""
 
-#: classes/pojo-lightbox-setting-page.php:193
+#: classes/pojo-lightbox-setting-page.php:265
 msgid "Lightbox"
 msgstr ""
 
@@ -165,7 +234,7 @@ msgid ""
 "WordPress site with Pojo Framework"
 msgstr ""
 
-#: pojo-lightbox.php:116
+#: pojo-lightbox.php:141
 #, php-format
 msgid ""
 "<a href=\"%s\" target=\"_blank\">Pojo Framework</a> is not active. Please "
