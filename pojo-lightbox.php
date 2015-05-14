@@ -36,8 +36,16 @@ define( 'POJO_LIGHTBOX_ASSETS_URL', POJO_LIGHTBOX_URL . 'assets/' );
 final class Pojo_Lightbox_Main {
 
 	private static $_instance = null;
-	
+
+	/**
+	 * @var Pojo_Lightbox_Admin_UI
+	 */
 	public $admin_ui;
+
+	/**
+	 * @var Pojo_Lightbox_Frontend
+	 */
+	public $frontend;
 
 	/**
 	 * @return Pojo_Lightbox_Main
@@ -61,6 +69,14 @@ final class Pojo_Lightbox_Main {
 
 			wp_register_script( 'jquery.magnific-popup', POJO_LIGHTBOX_ASSETS_URL . 'magnific-popup/jquery.magnific-popup.min.js', array( 'jquery' ), '1.0.0', true );
 			wp_enqueue_script( 'jquery.magnific-popup' );
+		} elseif ( 'photoswipe' === $lightbox_script ) {
+			wp_enqueue_style( 'photoswipe', POJO_LIGHTBOX_ASSETS_URL . 'photoswipe/photoswipe.css' );
+			wp_enqueue_style( 'photoswipe-skin', POJO_LIGHTBOX_ASSETS_URL . 'photoswipe/default-skin/default-skin.css' );
+
+			wp_register_script( 'photoswipe', POJO_LIGHTBOX_ASSETS_URL . 'photoswipe/photoswipe.min.js', array( 'jquery' ), '4.0.7', true );
+			wp_register_script( 'photoswipe-ui', POJO_LIGHTBOX_ASSETS_URL . 'photoswipe/photoswipe-ui-default.min.js', array( 'jquery' ), '4.0.7', true );
+			wp_enqueue_script( 'photoswipe' );
+			wp_enqueue_script( 'photoswipe-ui' );
 		}
 
 		wp_register_script( 'pojo-lightbox-app', POJO_LIGHTBOX_ASSETS_URL . 'js/app.min.js', array( 'jquery' ), false, true );
@@ -90,6 +106,15 @@ final class Pojo_Lightbox_Main {
 
 			if ( empty( $lightbox_args['animation_speed'] ) )
 				$lightbox_args['animation_speed'] = 'fast';
+		} elseif ( 'photoswipe' === $lightbox_script ) {
+			$lightbox_args = array(
+				'loop' => ( 'disable' !== pojo_get_option( 'photoswipe_loop' ) ),
+				'closeOnScroll' => ( 'disable' !== pojo_get_option( 'photoswipe_close_on_scroll' ) ),
+				'closeOnVerticalDrag' => ( 'disable' !== pojo_get_option( 'photoswipe_close_on_vertical_drag' ) ),
+				'escKey' => ( 'disable' !== pojo_get_option( 'photoswipe_esc_key' ) ),
+				'arrowKeys' => ( 'disable' !== pojo_get_option( 'photoswipe_arrow_keys' ) ),
+				'history' => ( 'disable' !== pojo_get_option( 'photoswipe_history' ) ),
+			);
 		}
 
 		$params['script_type']   = $lightbox_script;
@@ -126,8 +151,10 @@ final class Pojo_Lightbox_Main {
 		load_plugin_textdomain( 'pojo-lightbox', false, basename( dirname( POJO_LIGHTBOX__FILE__ ) ) . '/languages' );
 		
 		include( 'classes/pojo-lightbox-admin-ui.php' );
+		include( 'classes/pojo-lightbox-frontend.php' );
 		
 		$this->admin_ui = new Pojo_Lightbox_Admin_UI();
+		$this->frontend = new Pojo_Lightbox_Frontend();
 
 		add_action( 'wp_enqueue_scripts', array( &$this, 'enqueue_scripts' ), 150 );
 		add_action( 'pojo_framework_base_settings_included', array( &$this, 'include_settings' ) );

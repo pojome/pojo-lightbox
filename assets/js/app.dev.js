@@ -3,7 +3,7 @@
  */
 /* global jQuery, PojoLightboxOptions */
 
-( function( $, window, document, undefined ) {
+( function( $, window, document, PhotoSwipeUI_Default, undefined ) {
 	'use strict';
 
 	var Pojo_LightBox_App = {
@@ -24,6 +24,10 @@
 				
 				case 'magnific' :
 					this._bindEventsMagnificPopup();
+					break;
+				
+				case 'photoswipe' :
+					this._bindEventsPhotoSwipe();
 					break;
 			}
 		},
@@ -92,6 +96,130 @@
 			} );
 		},
 
+		// Bind for Photo Swipe
+		_bindEventsPhotoSwipe: function() {
+			var $photosWipeTemplate = $('.pswp')[0],
+				globalOptions = PojoLightboxOptions.lightbox_args;
+			
+			var _parseItemOptionsFromSelector = function( $this ) {
+					var image_size = $this.data( 'size' ),
+						image_width = 0,
+						image_height = 0;
+
+					if ( undefined !== image_size ) {
+						image_size = image_size.split( 'x' );
+						image_width = image_size[0];
+						image_height = image_size[1];
+					}
+
+					return {
+						src: $this.attr( 'href' ),
+						w: image_width,
+						h: image_height,
+						title: $this.find( 'img' ).attr( 'alt' ),
+						el: $this[0]
+					};
+				},
+
+				_getThumbBoundsFn = function( index, items ) {
+					var thumbnail = items[index].el.children[0],
+						pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
+						rect = thumbnail.getBoundingClientRect();
+
+					return {x: rect.left, y: rect.top + pageYScroll, w: rect.width};
+				};
+			
+			// Single Images
+			var $body;
+
+			if ( 'disable' === PojoLightboxOptions.woocommerce ) {
+				$body = $( 'body:not(.woocommerce)' );
+			} else {
+				$body = $( 'body' );
+			}
+
+			var $singleImages = $( 'a', $body )
+				.filter( function() {
+					return ( /\.(jpg|jpeg|gif|png)$/i.test( $( this ).attr( 'href' ) ) );
+				} )
+				.filter( function() {
+					// Is in WordPress Gallery?
+					return ( 0 === $( this ).closest( 'div.gallery' ).length );
+				} )
+				.has( 'img' );
+
+			$singleImages.on( 'click', function( event ) {
+				event.preventDefault();
+
+				var items = [ _parseItemOptionsFromSelector( $( this ) ) ];
+				var options = {
+					getThumbBoundsFn: function( index ) {
+						return _getThumbBoundsFn( index, items );
+					}
+				};
+				options = $.extend( {}, globalOptions, options );
+				var gallery = new PhotoSwipe( $photosWipeTemplate, PhotoSwipeUI_Default, items, options );
+				gallery.listen( 'gettingData', function( index, item ) {
+					if ( item.w < 1 || item.h < 1 ) { // unknown size
+						var img = new Image();
+						img.onload = function() { // will get size after load
+							item.w = this.width; // set image width
+							item.h = this.height; // set image height
+							gallery.invalidateCurrItems(); // reinit Items
+							gallery.updateSize( true ); // reinit Items
+						};
+						img.src = item.src; // let's download image
+					}
+				} );
+				gallery.init();
+			} );
+			
+			// WordPress Gallery
+			$( 'div.gallery' ).each( function() {
+				var $thisGallery = $( this ),
+					
+					_getItems = function() {
+						var items = [];
+						
+						$thisGallery.find( 'a' ).each( function() {
+							items.push( _parseItemOptionsFromSelector( $( this )) );
+						} );
+						
+						return items;
+					};
+
+				var items = _getItems();
+
+				$thisGallery.on( 'click', 'a', function( event ) {
+					event.preventDefault();
+					
+					var options = {
+						index: $thisGallery.find( 'a' ).index( this ),
+
+						getThumbBoundsFn: function( index ) {
+							return _getThumbBoundsFn( index, items );
+						}
+					};
+					options = $.extend( {}, globalOptions, options );
+					var gallery = new PhotoSwipe( $photosWipeTemplate, PhotoSwipeUI_Default, items, options );
+					gallery.listen( 'gettingData', function( index, item ) {
+						if ( item.w < 1 || item.h < 1 ) { // unknown size
+							var img = new Image();
+							img.onload = function() { // will get size after load
+								item.w = this.width; // set image width
+								item.h = this.height; // set image height
+								gallery.invalidateCurrItems(); // reinit Items
+								gallery.updateSize( true ); // reinit Items
+							};
+							img.src = item.src; // let's download image
+						}
+					} );
+					gallery.init();
+				} );
+				
+			} );
+		},
+
 		init: function() {
 			this.cacheElements();
 			this.buildElements();
@@ -103,4 +231,4 @@
 		Pojo_LightBox_App.init();
 	} );
 
-}( jQuery, window, document ) );
+}( jQuery, window, document, PhotoSwipeUI_Default ) );

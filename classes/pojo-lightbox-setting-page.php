@@ -11,6 +11,7 @@ class Pojo_Lightbox_Setting_Page extends Pojo_Settings_Page_Base {
 			'title' => __( 'LightBox Script', 'pojo-lightbox' ),
 			'type' => Pojo_Settings::FIELD_SELECT,
 			'options' => array(
+				'photoswipe' => __( 'PhotoSwipe', 'pojo-lightbox' ),
 				'magnific' => __( 'Magnific Popup', 'pojo-lightbox' ),
 				'prettyPhoto' => __( 'prettyPhoto', 'pojo-lightbox' ),
 			),
@@ -18,7 +19,7 @@ class Pojo_Lightbox_Setting_Page extends Pojo_Settings_Page_Base {
 		);
 
 		$fields = array_merge( $fields, $this->_get_pretty_photo_fields() );
-		$fields = array_merge( $fields, $this->_get_magnific_fields() );
+		$fields = array_merge( $fields, $this->_get_photoswipe_fields() );
 
 		$fields = array_merge( $fields, $this->_get_global_fields() );
 
@@ -124,15 +125,86 @@ class Pojo_Lightbox_Setting_Page extends Pojo_Settings_Page_Base {
 		return $fields;
 	}
 
-	protected function _get_magnific_fields() {
+	protected function _get_photoswipe_fields() {
 		$fields = array();
-		$wrapper_classes = 'lightbox-fields script-magnific';
+		$wrapper_classes = 'lightbox-fields script-photoswipe';
 		
 		$fields[] = array(
-			'id' => 'just_fields',
-			'title' => __( 'Test Field for Other script', 'pojo-lightbox' ),
+			'id' => 'photoswipe_loop',
+			'title' => __( 'Loop', 'pojo-lightbox' ),
+			'type' => Pojo_Settings::FIELD_SELECT,
+			'desc' => __( 'Loop slides when using swipe gesture. If set to `enable` you\'ll be able to swipe from last to first image. Option is always `disable` when there are less than 3 slides.', 'pojo-lightbox' ),
 			'class' => $wrapper_classes,
-			'std' => 'Empty String',
+			'options' => array(
+				'' => __( 'Enable', 'pojo-lightbox' ),
+				'disable' => __( 'Disable', 'pojo-lightbox' ),
+			),
+			'std' => '',
+		);
+		
+		$fields[] = array(
+			'id' => 'photoswipe_close_on_scroll',
+			'title' => __( 'Close on Scroll', 'pojo-lightbox' ),
+			'type' => Pojo_Settings::FIELD_SELECT,
+			'desc' => __( 'Close gallery on page scroll. Option works just for devices without hardware touch support.', 'pojo-lightbox' ),
+			'class' => $wrapper_classes,
+			'options' => array(
+				'' => __( 'Enable', 'pojo-lightbox' ),
+				'disable' => __( 'Disable', 'pojo-lightbox' ),
+			),
+			'std' => '',
+		);
+		
+		$fields[] = array(
+			'id' => 'photoswipe_close_on_vertical_drag',
+			'title' => __( 'Close on Vertical Drag', 'pojo-lightbox' ),
+			'type' => Pojo_Settings::FIELD_SELECT,
+			'desc' => __( 'Close gallery when dragging vertically and when image is not zoomed. Always `disable` when mouse is used.', 'pojo-lightbox' ),
+			'class' => $wrapper_classes,
+			'options' => array(
+				'' => __( 'Enable', 'pojo-lightbox' ),
+				'disable' => __( 'Disable', 'pojo-lightbox' ),
+			),
+			'std' => '',
+		);
+		
+		$fields[] = array(
+			'id' => 'photoswipe_esc_key',
+			'title' => __( 'Esc Key', 'pojo-lightbox' ),
+			'type' => Pojo_Settings::FIELD_SELECT,
+			'desc' => __( 'Esc keyboard key to close Lightbox', 'pojo-lightbox' ),
+			'class' => $wrapper_classes,
+			'options' => array(
+				'' => __( 'Enable', 'pojo-lightbox' ),
+				'disable' => __( 'Disable', 'pojo-lightbox' ),
+			),
+			'std' => '',
+		);
+		
+		$fields[] = array(
+			'id' => 'photoswipe_arrow_keys',
+			'title' => __( 'Esc Key', 'pojo-lightbox' ),
+			'type' => Pojo_Settings::FIELD_SELECT,
+			'desc' => __( 'Keyboard left or right arrow key navigation.', 'pojo-lightbox' ),
+			'class' => $wrapper_classes,
+			'options' => array(
+				'' => __( 'Enable', 'pojo-lightbox' ),
+				'disable' => __( 'Disable', 'pojo-lightbox' ),
+			),
+			'std' => '',
+		);
+		
+		$fields[] = array(
+			'id' => 'photoswipe_history',
+			'title' => __( 'History', 'pojo-lightbox' ),
+			'type' => Pojo_Settings::FIELD_SELECT,
+			'desc' => __( 'If set to `disable` disables history module (back button to close gallery, unique URL for each slide).', 'pojo-lightbox' ),
+			'class' => $wrapper_classes,
+			'options' => array(
+				'' => __( 'Enable', 'pojo-lightbox' ),
+				'disable' => __( 'Disable', 'pojo-lightbox' ),
+			),
+			'std' => '',
 		);
 		
 		return $fields;
