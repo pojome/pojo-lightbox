@@ -100,17 +100,6 @@ module.exports = function( grunt ) {
 			}
 		},
 
-		less: {
-			dist: {
-				options: {
-					cleancss: true
-				},
-				files: {
-					'assets/css/lightbox.css': 'assets/less/lightbox.less'
-				}
-			}
-		},
-
 		jshint: {
 			options: {
 				jshintrc: '.jshintrc'
@@ -142,16 +131,6 @@ module.exports = function( grunt ) {
 				tasks: [
 					'jshint',
 					'uglify'
-				],
-				options: {}
-			},
-
-			less: {
-				files: [
-					'**/*.less'
-				],
-				tasks: [
-					'less'
 				],
 				options: {}
 			}
@@ -205,7 +184,6 @@ module.exports = function( grunt ) {
 	grunt.registerTask( 'default', [
 		'checktextdomain',
 		'pot',
-		'less',
 		'uglify',
 		'usebanner'
 	] );

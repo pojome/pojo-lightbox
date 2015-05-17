@@ -3,7 +3,7 @@
  */
 /* global jQuery, PojoLightboxOptions */
 
-( function( $, window, document, PhotoSwipeUI_Default, undefined ) {
+( function( $, window, document, undefined ) {
 	'use strict';
 
 	var Pojo_LightBox_App = {
@@ -102,21 +102,41 @@
 				globalOptions = PojoLightboxOptions.lightbox_args;
 			
 			var _parseItemOptionsFromSelector = function( $this ) {
-					var image_size = $this.data( 'size' ),
-						image_width = 0,
-						image_height = 0;
+					var imageSize = $this.data( 'size' ),
+						imageWidth = 0,
+						imageHeight = 0,
+						//imageCaption = $this.find( 'img' ).attr( 'alt' ),
+						imageCaption = '',
 
-					if ( undefined !== image_size ) {
-						image_size = image_size.split( 'x' );
-						image_width = image_size[0];
-						image_height = image_size[1];
+						$captionElement;
+
+					if ( undefined !== imageSize ) {
+						imageSize = imageSize.split( 'x' );
+						imageWidth = imageSize[0];
+						imageHeight = imageSize[1];
 					}
+					
+					// Parse caption from WP Gallery
+					var $galleryItem = $this.closest( '.gallery-item' );
+					if ( 1 <= $galleryItem.length ) {
+						$captionElement = $galleryItem.find( '.wp-caption-text' );
 
+						if ( 1 <= $captionElement.length ) {
+							imageCaption = $captionElement.text();
+						}
+					}
+					
+					// Parse caption from Single image
+					$captionElement = $this.next( '.wp-caption-text' );
+					if ( 1 <= $captionElement.length ) {
+						imageCaption = $captionElement.text();
+					}
+					
 					return {
 						src: $this.attr( 'href' ),
-						w: image_width,
-						h: image_height,
-						title: $this.find( 'img' ).attr( 'alt' ),
+						w: imageWidth,
+						h: imageHeight,
+						title: imageCaption,
 						el: $this[0]
 					};
 				},
@@ -164,15 +184,15 @@
 				options = $.extend( {}, globalOptions, options );
 				var gallery = new PhotoSwipe( $photosWipeTemplate, PhotoSwipeUI_Default, items, options );
 				gallery.listen( 'gettingData', function( index, item ) {
-					if ( item.w < 1 || item.h < 1 ) { // unknown size
+					if ( item.w < 1 || item.h < 1 ) {
 						var img = new Image();
-						img.onload = function() { // will get size after load
-							item.w = this.width; // set image width
-							item.h = this.height; // set image height
-							gallery.invalidateCurrItems(); // reinit Items
-							gallery.updateSize( true ); // reinit Items
+						img.onload = function() {
+							item.w = this.width;
+							item.h = this.height;
+							gallery.invalidateCurrItems();
+							gallery.updateSize( true );
 						};
-						img.src = item.src; // let's download image
+						img.src = item.src;
 					}
 				} );
 				gallery.init();
@@ -235,4 +255,4 @@
 		Pojo_LightBox_App.init();
 	} );
 
-}( jQuery, window, document, PhotoSwipeUI_Default ) );
+}( jQuery, window, document ) );

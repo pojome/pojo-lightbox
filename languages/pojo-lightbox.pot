@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pojo-lightbox 1.0.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-17 15:09+0300\n"
+"POT-Creation-Date: 2015-05-17 19:18+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -111,7 +111,6 @@ msgstr ""
 #: classes/pojo-lightbox-setting-page.php:264
 #: classes/pojo-lightbox-setting-page.php:276
 #: classes/pojo-lightbox-setting-page.php:288
-#: classes/pojo-lightbox-setting-page.php:300
 msgid "Show"
 msgstr ""
 
@@ -125,7 +124,6 @@ msgstr ""
 #: classes/pojo-lightbox-setting-page.php:265
 #: classes/pojo-lightbox-setting-page.php:277
 #: classes/pojo-lightbox-setting-page.php:289
-#: classes/pojo-lightbox-setting-page.php:301
 msgid "Hide"
 msgstr ""
 
@@ -166,8 +164,8 @@ msgstr ""
 #: classes/pojo-lightbox-setting-page.php:178
 #: classes/pojo-lightbox-setting-page.php:191
 #: classes/pojo-lightbox-setting-page.php:204
+#: classes/pojo-lightbox-setting-page.php:305
 #: classes/pojo-lightbox-setting-page.php:317
-#: classes/pojo-lightbox-setting-page.php:329
 msgid "Enable"
 msgstr ""
 
@@ -177,8 +175,8 @@ msgstr ""
 #: classes/pojo-lightbox-setting-page.php:179
 #: classes/pojo-lightbox-setting-page.php:192
 #: classes/pojo-lightbox-setting-page.php:205
+#: classes/pojo-lightbox-setting-page.php:306
 #: classes/pojo-lightbox-setting-page.php:318
-#: classes/pojo-lightbox-setting-page.php:330
 msgid "Disable"
 msgstr ""
 
@@ -256,23 +254,19 @@ msgstr ""
 msgid "Share Button"
 msgstr ""
 
-#: classes/pojo-lightbox-setting-page.php:296
-msgid "Image Preloader"
-msgstr ""
-
-#: classes/pojo-lightbox-setting-page.php:314
+#: classes/pojo-lightbox-setting-page.php:302
 msgid "LightBox on Smartphone"
 msgstr ""
 
-#: classes/pojo-lightbox-setting-page.php:326
+#: classes/pojo-lightbox-setting-page.php:314
 msgid "LightBox on WooCommerce"
 msgstr ""
 
-#: classes/pojo-lightbox-setting-page.php:360
+#: classes/pojo-lightbox-setting-page.php:348
 msgid "Lightbox Settings"
 msgstr ""
 
-#: classes/pojo-lightbox-setting-page.php:361
+#: classes/pojo-lightbox-setting-page.php:349
 msgid "Lightbox"
 msgstr ""
 
@@ -282,7 +276,7 @@ msgid ""
 "WordPress site with Pojo Framework"
 msgstr ""
 
-#: pojo-lightbox.php:149
+#: pojo-lightbox.php:150
 #, php-format
 msgid ""
 "<a href=\"%s\" target=\"_blank\">Pojo Framework</a> is not active. Please "

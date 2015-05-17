@@ -79,8 +79,6 @@ final class Pojo_Lightbox_Main {
 			wp_enqueue_script( 'photoswipe-ui' );
 		}
 
-		wp_enqueue_style( 'pojo-lightbox-app', POJO_LIGHTBOX_ASSETS_URL . 'css/lightbox.css' );
-
 		wp_register_script( 'pojo-lightbox-app', POJO_LIGHTBOX_ASSETS_URL . 'js/app.min.js', array( 'jquery' ), false, true );
 		wp_enqueue_script( 'pojo-lightbox-app' );
 		
@@ -123,7 +121,6 @@ final class Pojo_Lightbox_Main {
 				'counterEl' => ( 'hide' !== pojo_get_option( 'photoswipe_show_image_counter' ) ),
 				'arrowEl' => ( 'hide' !== pojo_get_option( 'photoswipe_show_arrows' ) ),
 				'shareEl' => ( 'hide' !== pojo_get_option( 'photoswipe_show_share_button' ) ),
-				'preloaderEl' => ( 'hide' !== pojo_get_option( 'photoswipe_show_image_preloader' ) ),
 			);
 		}
 

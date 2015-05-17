@@ -12,7 +12,7 @@ class Pojo_Lightbox_Setting_Page extends Pojo_Settings_Page_Base {
 			'type' => Pojo_Settings::FIELD_SELECT,
 			'options' => array(
 				'photoswipe' => __( 'PhotoSwipe', 'pojo-lightbox' ),
-				'magnific' => __( 'Magnific Popup', 'pojo-lightbox' ),
+				//'magnific' => __( 'Magnific Popup', 'pojo-lightbox' ),
 				'prettyPhoto' => __( 'prettyPhoto', 'pojo-lightbox' ),
 			),
 			'std' => 'magnific',
@@ -282,18 +282,6 @@ class Pojo_Lightbox_Setting_Page extends Pojo_Settings_Page_Base {
 		$fields[] = array(
 			'id' => 'photoswipe_show_share_button',
 			'title' => __( 'Share Button', 'pojo-lightbox' ),
-			'type' => Pojo_Settings::FIELD_SELECT,
-			'class' => $wrapper_classes,
-			'options' => array(
-				'' => __( 'Show', 'pojo-lightbox' ),
-				'hide' => __( 'Hide', 'pojo-lightbox' ),
-			),
-			'std' => '',
-		);
-		
-		$fields[] = array(
-			'id' => 'photoswipe_show_image_preloader',
-			'title' => __( 'Image Preloader', 'pojo-lightbox' ),
 			'type' => Pojo_Settings::FIELD_SELECT,
 			'class' => $wrapper_classes,
 			'options' => array(
