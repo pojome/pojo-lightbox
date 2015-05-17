@@ -93,8 +93,20 @@ module.exports = function( grunt ) {
 				},
 				files: {
 					src: [
+						'assets/css/lightbox.css',
 						'assets/js/app.min.js'
 					]
+				}
+			}
+		},
+
+		less: {
+			dist: {
+				options: {
+					cleancss: true
+				},
+				files: {
+					'assets/css/lightbox.css': 'assets/less/lightbox.less'
 				}
 			}
 		},
@@ -133,6 +145,16 @@ module.exports = function( grunt ) {
 				],
 				options: {}
 			},
+
+			less: {
+				files: [
+					'**/*.less'
+				],
+				tasks: [
+					'less'
+				],
+				options: {}
+			}
 		},
 
 		bumpup: {
@@ -183,6 +205,7 @@ module.exports = function( grunt ) {
 	grunt.registerTask( 'default', [
 		'checktextdomain',
 		'pot',
+		'less',
 		'uglify',
 		'usebanner'
 	] );

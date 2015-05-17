@@ -79,6 +79,8 @@ final class Pojo_Lightbox_Main {
 			wp_enqueue_script( 'photoswipe-ui' );
 		}
 
+		wp_enqueue_style( 'pojo-lightbox-app', POJO_LIGHTBOX_ASSETS_URL . 'css/lightbox.css' );
+
 		wp_register_script( 'pojo-lightbox-app', POJO_LIGHTBOX_ASSETS_URL . 'js/app.min.js', array( 'jquery' ), false, true );
 		wp_enqueue_script( 'pojo-lightbox-app' );
 		
