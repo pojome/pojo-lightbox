@@ -136,6 +136,17 @@ module.exports = function( grunt ) {
 			}
 		},
 
+		wp_readme_to_markdown: {
+			github: {
+				options: {
+					gruntDependencyStatusUrl: 'https://david-dm.org/pojome/pojo-lightbox'
+				},
+				files: {
+					'README.md': 'readme.txt'
+				}
+			}
+		},
+
 		bumpup: {
 			options: {
 				updateProps: {
@@ -176,6 +187,48 @@ module.exports = function( grunt ) {
 				commitMessage: 'released v<%= version %>',
 				tagMessage: 'Tagged as v<%= version %>'
 			}
+		},
+
+		copy: {
+			main: {
+				src: [
+					'**',
+					'!node_modules/**',
+					'!build/**',
+					'!bin/**',
+					'!.git/**',
+					'!tests/**',
+					'!.travis.yml',
+					'!.jshintrc',
+					'!README.md',
+					'!phpunit.xml',
+					'!vendor/**',
+					'!Gruntfile.js',
+					'!package.json',
+					'!.gitignore',
+					'!.gitmodules',
+					'!*~'
+				],
+				expand: true,
+				dest: 'build/'
+			}
+		},
+
+		clean: {
+			//Clean up build folder
+			main: [
+				'build'
+			]
+		},
+
+		wp_deploy: {
+			deploy:{
+				options: {
+					plugin_slug: '<%= pkg.slug %>',
+					svn_user: 'KingYes',
+					build_dir: 'build/'
+				}
+			}
 		}
 		
 	} );
@@ -185,7 +238,14 @@ module.exports = function( grunt ) {
 		'checktextdomain',
 		'pot',
 		'uglify',
-		'usebanner'
+		'usebanner',
+		'wp_readme_to_markdown'
+	] );
+
+	grunt.registerTask( 'build', [
+		'default',
+		'clean',
+		'copy'
 	] );
 
 	grunt.registerTask( 'publish', [

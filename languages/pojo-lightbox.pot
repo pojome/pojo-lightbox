@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pojo-lightbox 1.0.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-17 19:18+0300\n"
+"POT-Creation-Date: 2015-05-17 19:53+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,10 +31,6 @@ msgstr ""
 
 #: classes/pojo-lightbox-setting-page.php:14
 msgid "PhotoSwipe"
-msgstr ""
-
-#: classes/pojo-lightbox-setting-page.php:15
-msgid "Magnific Popup"
 msgstr ""
 
 #: classes/pojo-lightbox-setting-page.php:16
@@ -276,7 +272,7 @@ msgid ""
 "WordPress site with Pojo Framework"
 msgstr ""
 
-#: pojo-lightbox.php:150
+#: pojo-lightbox.php:148
 #, php-format
 msgid ""
 "<a href=\"%s\" target=\"_blank\">Pojo Framework</a> is not active. Please "
