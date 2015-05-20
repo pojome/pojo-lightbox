@@ -15,7 +15,7 @@ class Pojo_Lightbox_Setting_Page extends Pojo_Settings_Page_Base {
 				//'magnific' => __( 'Magnific Popup', 'pojo-lightbox' ),
 				'prettyPhoto' => __( 'prettyPhoto', 'pojo-lightbox' ),
 			),
-			'std' => 'magnific',
+			'std' => 'photoswipe',
 		);
 
 		$fields = array_merge( $fields, $this->_get_pretty_photo_fields() );
