@@ -53,6 +53,9 @@ Would you like to like to contribute to Pojo Lightbox? You are more than welcome
 
 ## Changelog ##
 
+### 1.0.7 ###
+* Tweak! - prettyPhoto updated to fix the XSS vulnerability
+
 ### 1.0.6 ###
 * Added option to Disable Lightbox on WooCommerce
 * Better responsive support
