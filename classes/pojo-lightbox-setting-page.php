@@ -317,7 +317,7 @@ class Pojo_Lightbox_Setting_Page extends Pojo_Settings_Page_Base {
 					'' => __( 'Enable', 'pojo-lightbox' ),
 					'disable' => __( 'Disable', 'pojo-lightbox' ),
 				),
-				'std' => '',
+				'std' => 'disable',
 			);
 		}
 		
