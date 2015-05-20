@@ -2,8 +2,8 @@
 Contributors: pojo.me, KingYes, ariel.k
 Tags: lightbox, image, allery, images, jquery, media, modal, overlay, prettyphoto, slideshow, PrettyPhoto,
 Requires at least: 3.5
-Tested up to: 4.1
-Stable tag: 1.0.6
+Tested up to: 4.2.2
+Stable tag: 2.0.0
 License: GPLv2 or later
 
 This plugin used to add the lightbox (overlay) effect to all images on your WordPress site with Pojo Framework.
@@ -12,11 +12,11 @@ This plugin used to add the lightbox (overlay) effect to all images on your Word
 
 **Please Note:** This plugin is only for [Pojo Framework][1] users - Pojo is a premium themes.
 
-A simple plugin to conveniently add [prettyPhoto lightbox][3] functionality to your WordPress posts and pages.
+A simple plugin to conveniently add [PhotoSwipe lightbox][3] and [prettyPhoto lightbox][4] functionality to your WordPress posts and pages.
 
 **Featured:**
 
-*   6 Styles for Lightbox
+*   7 Styles for Lightbox
 *   Show/Hide image title
 *   Show/Hide share buttons
 *   Show/Hide thumbnails
@@ -30,7 +30,8 @@ Would you like to like to contribute to Pojo Lightbox? You are more than welcome
 
  [1]: http://pojo.me/?utm_source=wp-repo&utm_medium=link&utm_campaign=lightbox
  [2]: https://github.com/pojome/pojo-lightbox
- [3]: http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone
+ [3]: http://photoswipe.com/
+ [4]: http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone
 
 == Installation ==
 
@@ -50,6 +51,10 @@ Would you like to like to contribute to Pojo Lightbox? You are more than welcome
 <ol>
 
 == Changelog ==
+
+= 2.0.0 =
+* New! - Added PhotoSwipe lightbox script
+* Tested up to WordPress v4.2.2
 
 = 1.0.7 =
 * Tweak! - prettyPhoto updated to fix the XSS vulnerability
