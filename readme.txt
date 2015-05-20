@@ -10,7 +10,7 @@ This plugin used to add the lightbox (overlay) effect to all images on your Word
 
 == Description ==
 
-**Please Note:** This plugin is only for [Pojo Framework][1] users - Pojo is a premium themes.
+**Please Note:** This plugin is for [Pojo Framework][1] users only.
 
 A simple plugin to conveniently add [PhotoSwipe lightbox][3] and [prettyPhoto lightbox][4] functionality to your WordPress posts and pages.
 
