@@ -1,10 +1,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Pojo Lightbox\n"
-"Report-Msgid-Bugs-To: http://pojo.me/\n"
-"POT-Creation-Date: 2014-04-23 12:25+0200\n"
-"PO-Revision-Date: 2014-04-23 12:25+0200\n"
-"Last-Translator: Ariel K <a@arielk.net>\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-05-20 18:44+0300\n"
+"PO-Revision-Date: 2015-05-20 18:58+0200\n"
+"Last-Translator: Yakir Sitbon <yakir@pojo.me>\n"
 "Language-Team: Pojo Themes <team@pojo.me>\n"
 "Language: he_IL\n"
 "MIME-Version: 1.0\n"
@@ -16,146 +16,285 @@ msgstr ""
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.5.5\n"
+"X-Generator: Poedit 1.7.5\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../classes/pojo-lightbox-admin-ui.php:7
+#: classes/pojo-lightbox-admin-ui.php:7
 msgid "GitHub"
 msgstr ""
 
-#: ../classes/pojo-lightbox-admin-ui.php:10
+#: classes/pojo-lightbox-admin-ui.php:10
 msgid "Settings"
 msgstr "הגדרות"
 
-#: ../classes/pojo-lightbox-setting-page.php:11
-msgid "Enable LightBox"
-msgstr "אפשר לייטבוקס"
+#: classes/pojo-lightbox-setting-page.php:11
+msgid "LightBox Script"
+msgstr "סוג LightBox"
 
-#: ../classes/pojo-lightbox-setting-page.php:14
-#: ../classes/pojo-lightbox-setting-page.php:102
-msgid "Enable"
-msgstr "אפשר"
+#: classes/pojo-lightbox-setting-page.php:14
+msgid "PhotoSwipe"
+msgstr ""
 
-#: ../classes/pojo-lightbox-setting-page.php:15
-#: ../classes/pojo-lightbox-setting-page.php:103
-msgid "Disable"
-msgstr "אל תאפשר"
+#: classes/pojo-lightbox-setting-page.php:16
+msgid "prettyPhoto"
+msgstr ""
 
-#: ../classes/pojo-lightbox-setting-page.php:22
+#: classes/pojo-lightbox-setting-page.php:29
+msgid "Lightbox:"
+msgstr "לייטבוקס:"
+
+#: classes/pojo-lightbox-setting-page.php:43
 msgid "LightBox Theme"
 msgstr "סגנון לייטבוקס"
 
-#: ../classes/pojo-lightbox-setting-page.php:24
+#: classes/pojo-lightbox-setting-page.php:45
 msgid "6 Themes to choose from"
 msgstr "6 סגנונות לבחירה"
 
-#: ../classes/pojo-lightbox-setting-page.php:26
+#: classes/pojo-lightbox-setting-page.php:48
 msgid "Default"
 msgstr "ברירת מחדל"
 
-#: ../classes/pojo-lightbox-setting-page.php:27
+#: classes/pojo-lightbox-setting-page.php:49
 #, fuzzy
 msgid "Light Rounded"
 msgstr "בהיר"
 
-#: ../classes/pojo-lightbox-setting-page.php:28
+#: classes/pojo-lightbox-setting-page.php:50
 #, fuzzy
 msgid "Dark Rounded"
 msgstr "כהה"
 
-#: ../classes/pojo-lightbox-setting-page.php:29
+#: classes/pojo-lightbox-setting-page.php:51
 #, fuzzy
 msgid "Dark Square"
 msgstr "כהה"
 
-#: ../classes/pojo-lightbox-setting-page.php:30
+#: classes/pojo-lightbox-setting-page.php:52
 #, fuzzy
 msgid "Light Square"
 msgstr "בהיר"
 
-#: ../classes/pojo-lightbox-setting-page.php:31
+#: classes/pojo-lightbox-setting-page.php:53
 msgid "Facebook"
 msgstr "פייסבוק"
 
-#: ../classes/pojo-lightbox-setting-page.php:38
+#: classes/pojo-lightbox-setting-page.php:60
 msgid "Animation Speed"
 msgstr "מהירות אנימציה"
 
-#: ../classes/pojo-lightbox-setting-page.php:42
+#: classes/pojo-lightbox-setting-page.php:65
 msgid "Fast"
 msgstr "מהיר"
 
-#: ../classes/pojo-lightbox-setting-page.php:43
+#: classes/pojo-lightbox-setting-page.php:66
 msgid "Normal"
 msgstr "רגיל"
 
-#: ../classes/pojo-lightbox-setting-page.php:44
+#: classes/pojo-lightbox-setting-page.php:67
 msgid "Slow"
 msgstr "איטי"
 
-#: ../classes/pojo-lightbox-setting-page.php:50
+#: classes/pojo-lightbox-setting-page.php:73
 msgid "Background Opacity"
 msgstr "שקיפות"
 
-#: ../classes/pojo-lightbox-setting-page.php:57
+#: classes/pojo-lightbox-setting-page.php:81
 msgid "Show Title"
 msgstr "הצגת כותרת"
 
-#: ../classes/pojo-lightbox-setting-page.php:60
-#: ../classes/pojo-lightbox-setting-page.php:71
-#: ../classes/pojo-lightbox-setting-page.php:91
+#: classes/pojo-lightbox-setting-page.php:85
+#: classes/pojo-lightbox-setting-page.php:97
+#: classes/pojo-lightbox-setting-page.php:119
+#: classes/pojo-lightbox-setting-page.php:216
+#: classes/pojo-lightbox-setting-page.php:228
+#: classes/pojo-lightbox-setting-page.php:240
+#: classes/pojo-lightbox-setting-page.php:252
+#: classes/pojo-lightbox-setting-page.php:264
+#: classes/pojo-lightbox-setting-page.php:276
+#: classes/pojo-lightbox-setting-page.php:288
 msgid "Show"
 msgstr "להציג"
 
-#: ../classes/pojo-lightbox-setting-page.php:61
-#: ../classes/pojo-lightbox-setting-page.php:72
-#: ../classes/pojo-lightbox-setting-page.php:92
+#: classes/pojo-lightbox-setting-page.php:86
+#: classes/pojo-lightbox-setting-page.php:98
+#: classes/pojo-lightbox-setting-page.php:120
+#: classes/pojo-lightbox-setting-page.php:217
+#: classes/pojo-lightbox-setting-page.php:229
+#: classes/pojo-lightbox-setting-page.php:241
+#: classes/pojo-lightbox-setting-page.php:253
+#: classes/pojo-lightbox-setting-page.php:265
+#: classes/pojo-lightbox-setting-page.php:277
+#: classes/pojo-lightbox-setting-page.php:289
 msgid "Hide"
 msgstr "להסתיר"
 
-#: ../classes/pojo-lightbox-setting-page.php:68
+#: classes/pojo-lightbox-setting-page.php:93
 msgid "Gallery Thumbnails"
 msgstr "תמונות ממוזערות"
 
-#: ../classes/pojo-lightbox-setting-page.php:79
+#: classes/pojo-lightbox-setting-page.php:105
 msgid "Autoplay Gallery Speed"
 msgstr "מהירות מעבר תמונות בגלריה"
 
-#: ../classes/pojo-lightbox-setting-page.php:80
+#: classes/pojo-lightbox-setting-page.php:106
 msgid "Default: 5000, 1000 ms = 1 second"
 msgstr "ברירת מחדל: 5000, 1000 מילישניות = 1 שניה"
 
-#: ../classes/pojo-lightbox-setting-page.php:87
+#: classes/pojo-lightbox-setting-page.php:114
 msgid "Social Icons"
 msgstr "כפתורי שיתוף"
 
-#: ../classes/pojo-lightbox-setting-page.php:89
+#: classes/pojo-lightbox-setting-page.php:116
 msgid "Show social sharing buttons on lightbox"
 msgstr "הצגת כפתורי שיתוף על הלייטבוקס"
 
-#: ../classes/pojo-lightbox-setting-page.php:99
+#: classes/pojo-lightbox-setting-page.php:134
+msgid "Loop"
+msgstr ""
+
+#: classes/pojo-lightbox-setting-page.php:136
+msgid ""
+"Loop slides when using swipe gesture. If set to `enable` you'll be able to "
+"swipe from last to first image. Option is always `disable` when there are "
+"less than 3 slides."
+msgstr ""
+"מעבר בין תמונות גלריה באמצעות מחווה. במידה ומוגדר 'אפשר' ניתן לעבור בין "
+"התמונות באמצעות מחווה. אפשרות זו קיימת רק בגלריה עם 3 תמונות לפחות."
+
+#: classes/pojo-lightbox-setting-page.php:139
+#: classes/pojo-lightbox-setting-page.php:152
+#: classes/pojo-lightbox-setting-page.php:165
+#: classes/pojo-lightbox-setting-page.php:178
+#: classes/pojo-lightbox-setting-page.php:191
+#: classes/pojo-lightbox-setting-page.php:204
+#: classes/pojo-lightbox-setting-page.php:305
+#: classes/pojo-lightbox-setting-page.php:317
+msgid "Enable"
+msgstr "אפשר"
+
+#: classes/pojo-lightbox-setting-page.php:140
+#: classes/pojo-lightbox-setting-page.php:153
+#: classes/pojo-lightbox-setting-page.php:166
+#: classes/pojo-lightbox-setting-page.php:179
+#: classes/pojo-lightbox-setting-page.php:192
+#: classes/pojo-lightbox-setting-page.php:205
+#: classes/pojo-lightbox-setting-page.php:306
+#: classes/pojo-lightbox-setting-page.php:318
+msgid "Disable"
+msgstr "אל תאפשר"
+
+#: classes/pojo-lightbox-setting-page.php:147
+msgid "Close on Scroll"
+msgstr "סגירה בעת גלילה"
+
+#: classes/pojo-lightbox-setting-page.php:149
+msgid ""
+"Close gallery on page scroll. Option works just for devices without hardware "
+"touch support."
+msgstr "סגירת גלריה בעת גלילת העמוד. אפשרות זו עובדת רק במכשירים ללא מסך טאצ'."
+
+#: classes/pojo-lightbox-setting-page.php:160
+msgid "Close on Vertical Drag"
+msgstr "סגירה בעת הזזה אנכית"
+
+#: classes/pojo-lightbox-setting-page.php:162
+msgid ""
+"Close gallery when dragging vertically and when image is not zoomed. Always "
+"`disable` when mouse is used."
+msgstr "סגירת גלריה בעת גרירה אנכית וכאשר התמונה אינה במצב זום."
+
+#: classes/pojo-lightbox-setting-page.php:173
+msgid "Esc Key"
+msgstr "כפתור Esc"
+
+#: classes/pojo-lightbox-setting-page.php:175
+msgid "Esc keyboard key to close Lightbox"
+msgstr "שימוש בכפתור Esc כדי לסגור את הלייטבוקס"
+
+#: classes/pojo-lightbox-setting-page.php:186
+msgid "Arrow Key"
+msgstr "ניווט באמצעות חיצי מקלדת"
+
+#: classes/pojo-lightbox-setting-page.php:188
+msgid "Keyboard left or right arrow key navigation."
+msgstr "חיצי מקלדת שמאל וימין כדי לנווט בין תמונות גלריה."
+
+#: classes/pojo-lightbox-setting-page.php:199
+msgid "History"
+msgstr "היסטוריה"
+
+#: classes/pojo-lightbox-setting-page.php:201
+msgid ""
+"If set to `disable` disables history module (back button to close gallery, "
+"unique URL for each slide)."
+msgstr ""
+"ניתן להשבית את את אפשרויות ההיסטוריה (היסטוריה שומרת כתובת ייחודית לכל "
+"שקופית)."
+
+#: classes/pojo-lightbox-setting-page.php:212
+msgid "Caption"
+msgstr "כיתוב תמונה"
+
+#: classes/pojo-lightbox-setting-page.php:224
+msgid "Close Button"
+msgstr "כפתור סגירה"
+
+#: classes/pojo-lightbox-setting-page.php:236
+msgid "FullScreen Button"
+msgstr "כפתור מסך מלא"
+
+#: classes/pojo-lightbox-setting-page.php:248
+msgid "Zoom Button"
+msgstr "כפתור זום"
+
+#: classes/pojo-lightbox-setting-page.php:260
+msgid "Image Counter"
+msgstr "סופר תמונות"
+
+#: classes/pojo-lightbox-setting-page.php:272
+msgid "Arrow Navigation"
+msgstr "חיצי ניווט"
+
+#: classes/pojo-lightbox-setting-page.php:284
+msgid "Share Button"
+msgstr "כפתורי שיתוף"
+
+#: classes/pojo-lightbox-setting-page.php:302
 msgid "LightBox on Smartphone"
 msgstr "לייטבוקס על סמארטפונים"
 
-#: ../classes/pojo-lightbox-setting-page.php:111
-msgid "Lightbox:"
-msgstr "לייטבוקס:"
+#: classes/pojo-lightbox-setting-page.php:314
+msgid "LightBox on WooCommerce"
+msgstr "לייטבוקס על WooCommerce"
 
-#: ../classes/pojo-lightbox-setting-page.php:121
+#: classes/pojo-lightbox-setting-page.php:348
 msgid "Lightbox Settings"
 msgstr "לייטבוקס:"
 
-#: ../classes/pojo-lightbox-setting-page.php:122
+#: classes/pojo-lightbox-setting-page.php:349
 msgid "Lightbox"
 msgstr "לייטבוקס"
 
-#: ../language/strings.php:4
+#: languages/strings.php:4
 msgid ""
 "This plugin used to add the lightbox (overlay) effect to all images on your "
 "WordPress site with Pojo Framework"
 msgstr ""
 "תוסף זה משמש להוספת אפקט Lightbox על כל התמונות באתר WordPress שעובד עלPojo "
 "Framework."
+
+#: pojo-lightbox.php:148
+#, php-format
+msgid ""
+"<a href=\"%s\" target=\"_blank\">Pojo Framework</a> is not active. Please "
+"activate any theme by Pojo before you are using \"Pojo Lightbox\" plugin."
+msgstr ""
+"<a href=\"%s\" target=\"_blank\">Pojo Framework</a> אינו פעיל. יש להפעיל "
+"ערכת עיצוב של Pojo לפני שמשתמשים בתוסף \"Pojo Lightbox\"."
+
+#~ msgid "Enable LightBox"
+#~ msgstr "אפשר לייטבוקס"
 
 #~ msgid "404"
 #~ msgstr "שגיאה 404"
@@ -462,9 +601,6 @@ msgstr ""
 
 #~ msgid "Open in LightBox"
 #~ msgstr "פתיחה בלייטבוקס"
-
-#~ msgid "Caption"
-#~ msgstr "כיתוב תמונה"
 
 #~ msgid "Images"
 #~ msgstr "תמונות"
