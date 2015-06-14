@@ -326,13 +326,10 @@ class Pojo_Lightbox_Setting_Page extends Pojo_Settings_Page_Base {
 
 	public function print_js() {
 		// TODO: Move to other file
-		if ( 'theme-options_page_pojo-lightbox' !== get_current_screen()->id )
-			return;
-		
 		?>
 		<script>
 			jQuery( document ).ready( function( $ ) {
-				var $lightboxScript = $( '#lightbox_script' );
+				var $lightboxScript = $( 'table.form-table #lightbox_script' );
 				$lightboxScript.on( 'change', function() {
 					$( 'tr.lightbox-fields' ).hide();
 					$( 'tr.script-' + $( this ).val() ).fadeIn( 'fast' );
