@@ -203,22 +203,24 @@
 				var $thisGallery = $( this ),
 					
 					_getItems = function() {
-						var items = [];
+						var items = [],
+							itemIndex = 0;
 						
 						$thisGallery.find( 'a' ).each( function() {
-							items.push( _parseItemOptionsFromSelector( $( this )) );
+							items.push( _parseItemOptionsFromSelector( $( this ) ) );
+							$( this ).data( 'lightbox_index', itemIndex++ );
 						} );
 						
 						return items;
 					};
 
 				var items = _getItems();
-
+				
 				$thisGallery.on( 'click', 'a', function( event ) {
 					event.preventDefault();
 					
 					var options = {
-						index: $thisGallery.find( 'a' ).index( this ),
+						index: $( this ).data( 'lightbox_index' ),
 
 						getThumbBoundsFn: function( index ) {
 							return _getThumbBoundsFn( index, items );
