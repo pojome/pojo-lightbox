@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pojo-lightbox 2.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-20 19:19+0300\n"
+"POT-Creation-Date: 2015-06-15 13:46+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -258,11 +258,11 @@ msgstr ""
 msgid "LightBox on WooCommerce"
 msgstr ""
 
-#: classes/pojo-lightbox-setting-page.php:348
+#: classes/pojo-lightbox-setting-page.php:345
 msgid "Lightbox Settings"
 msgstr ""
 
-#: classes/pojo-lightbox-setting-page.php:349
+#: classes/pojo-lightbox-setting-page.php:346
 msgid "Lightbox"
 msgstr ""
 
