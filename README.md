@@ -54,6 +54,9 @@ Would you like to like to contribute to Pojo Lightbox? You are more than welcome
 
 ## Changelog ##
 
+### 2.0.3 ###
+* Tweak! - Update photoswipe plugin 
+
 ### 2.0.2 ###
 * Fixes! - For hebrew dashboard
 * Fixes! - Wrong index lightbox in Gallery slider
