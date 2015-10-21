@@ -51,8 +51,9 @@ final class Pojo_Lightbox_Main {
 	 * @return Pojo_Lightbox_Main
 	 */
 	public static function instance() {
-		if ( is_null( self::$_instance ) )
-			self::$_instance = new Pojo_Lightbox_Main();
+		if ( is_null( self::$_instance ) ) {
+			self::$_instance = new self();
+		}
 		return self::$_instance;
 	}
 	
