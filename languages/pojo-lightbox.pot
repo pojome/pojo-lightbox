@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pojo-lightbox 2.0.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-22 16:29+0300\n"
+"POT-Creation-Date: 2016-05-17 18:04+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -38,7 +38,8 @@ msgid "prettyPhoto"
 msgstr ""
 
 #: classes/pojo-lightbox-setting-page.php:29
-msgid "Lightbox:"
+#: classes/pojo-lightbox-setting-page.php:346
+msgid "Lightbox"
 msgstr ""
 
 #: classes/pojo-lightbox-setting-page.php:43
@@ -262,17 +263,13 @@ msgstr ""
 msgid "Lightbox Settings"
 msgstr ""
 
-#: classes/pojo-lightbox-setting-page.php:346
-msgid "Lightbox"
-msgstr ""
-
 #: languages/strings.php:4
 msgid ""
 "This plugin used to add the lightbox (overlay) effect to all images on your "
 "WordPress site with Pojo Framework"
 msgstr ""
 
-#: pojo-lightbox.php:148
+#: pojo-lightbox.php:149
 #, php-format
 msgid ""
 "<a href=\"%s\" target=\"_blank\">Pojo Framework</a> is not active. Please "

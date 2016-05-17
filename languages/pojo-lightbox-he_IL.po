@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pojo Lightbox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-20 18:44+0300\n"
-"PO-Revision-Date: 2015-05-20 18:58+0200\n"
+"POT-Creation-Date: 2016-05-17 18:02+0300\n"
+"PO-Revision-Date: 2016-05-17 18:03+0300\n"
 "Last-Translator: Yakir Sitbon <yakir@pojo.me>\n"
 "Language-Team: Pojo Themes <team@pojo.me>\n"
 "Language: he_IL\n"
@@ -16,7 +16,7 @@ msgstr ""
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.7.5\n"
+"X-Generator: Poedit 1.8.7\n"
 "X-Poedit-SearchPath-0: ..\n"
 
 #: classes/pojo-lightbox-admin-ui.php:7
@@ -40,8 +40,9 @@ msgid "prettyPhoto"
 msgstr ""
 
 #: classes/pojo-lightbox-setting-page.php:29
-msgid "Lightbox:"
-msgstr "לייטבוקס:"
+#: classes/pojo-lightbox-setting-page.php:346
+msgid "Lightbox"
+msgstr "לייטבוקס"
 
 #: classes/pojo-lightbox-setting-page.php:43
 msgid "LightBox Theme"
@@ -268,13 +269,9 @@ msgstr "לייטבוקס על סמארטפונים"
 msgid "LightBox on WooCommerce"
 msgstr "לייטבוקס על WooCommerce"
 
-#: classes/pojo-lightbox-setting-page.php:348
+#: classes/pojo-lightbox-setting-page.php:345
 msgid "Lightbox Settings"
 msgstr "לייטבוקס:"
-
-#: classes/pojo-lightbox-setting-page.php:349
-msgid "Lightbox"
-msgstr "לייטבוקס"
 
 #: languages/strings.php:4
 msgid ""
@@ -284,7 +281,7 @@ msgstr ""
 "תוסף זה משמש להוספת אפקט Lightbox על כל התמונות באתר WordPress שעובד עלPojo "
 "Framework."
 
-#: pojo-lightbox.php:148
+#: pojo-lightbox.php:149
 #, php-format
 msgid ""
 "<a href=\"%s\" target=\"_blank\">Pojo Framework</a> is not active. Please "
@@ -292,6 +289,9 @@ msgid ""
 msgstr ""
 "<a href=\"%s\" target=\"_blank\">Pojo Framework</a> אינו פעיל. יש להפעיל "
 "ערכת עיצוב של Pojo לפני שמשתמשים בתוסף \"Pojo Lightbox\"."
+
+#~ msgid "Lightbox:"
+#~ msgstr "לייטבוקס:"
 
 #~ msgid "Enable LightBox"
 #~ msgstr "אפשר לייטבוקס"
