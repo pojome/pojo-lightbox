@@ -26,7 +26,7 @@ class Pojo_Lightbox_Setting_Page extends Pojo_Settings_Page_Base {
 		$sections[] = array(
 			'id' => 'section-lightbox',
 			'page' => $this->_page_id,
-			'title' => __( 'Lightbox:', 'pojo-lightbox' ),
+			'title' => __( 'Lightbox', 'pojo-lightbox' ),
 			'intro' => '',
 			'fields' => $fields,
 		);
