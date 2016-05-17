@@ -55,7 +55,7 @@ Would you like to like to contribute to Pojo Lightbox? You are more than welcome
 ## Changelog ##
 
 ### 2.0.4 ###
-* Tweak! - Added magnify styles for PhotoSwipe lightbox
+* Tweak! - Added minify styles for PhotoSwipe lightbox
 
 ### 2.0.3 ###
 * Tweak! - Update photoswipe plugin 
