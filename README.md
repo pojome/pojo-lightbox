@@ -4,7 +4,7 @@
 **Contributors:** pojo.me, KingYes, ariel.k  
 **Tags:** lightbox, image, allery, images, jquery, media, modal, overlay, prettyphoto, slideshow, PrettyPhoto,  
 **Requires at least:** 3.5  
-**Tested up to:** 4.2.2  
+**Tested up to:** 4.5  
 **Stable tag:** 2.0.4  
 **License:** GPLv2 or later  
 
