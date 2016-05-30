@@ -1,13 +1,12 @@
 <?php
 /*
 Plugin Name: Pojo Lightbox
-Plugin URI:  https://github.com/pojome/pojo-lightbox
-Version:     2.0.4
+Plugin URI:  https://wordpress.org/plugins/pojo-lightbox/
+Version:     2.0.5
 Description: This plugin used to add the lightbox (overlay) effect to all images on your WordPress site with Pojo Framework.
 Author:      Pojo Team
 Author URI:  http://pojo.me/
 Text Domain: pojo-lightbox
-Domain Path: /languages/
 License:     GPLv2 or later
 
 
@@ -57,6 +56,10 @@ final class Pojo_Lightbox_Main {
 		return self::$_instance;
 	}
 	
+	public function load_textdomain() {
+		load_plugin_textdomain( 'pojo-lightbox' );
+	}
+
 	public function enqueue_scripts() {
 		$lightbox_script = pojo_get_option( 'lightbox_script' );
 
@@ -156,8 +159,6 @@ final class Pojo_Lightbox_Main {
 			return;
 		}
 
-		load_plugin_textdomain( 'pojo-lightbox', false, basename( dirname( POJO_LIGHTBOX__FILE__ ) ) . '/languages' );
-		
 		include( 'classes/pojo-lightbox-admin-ui.php' );
 		include( 'classes/pojo-lightbox-frontend.php' );
 		
@@ -170,10 +171,10 @@ final class Pojo_Lightbox_Main {
 
 	public function __construct() {
 		add_action( 'init', array( &$this, 'bootstrap' ) );
+		add_action( 'plugins_loaded', array( &$this, 'load_textdomain' ) );
 	}
 	
 }
 
 Pojo_Lightbox_Main::instance();
-
 // EOF
