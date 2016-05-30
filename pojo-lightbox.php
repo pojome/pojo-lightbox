@@ -1,8 +1,8 @@
 <?php
 /*
 Plugin Name: Pojo Lightbox
-Plugin URI:  https://github.com/pojome/pojo-lightbox
-Version:     2.0.4
+Plugin URI:  https://wordpress.org/plugins/pojo-lightbox/
+Version:     2.0.5
 Description: This plugin used to add the lightbox (overlay) effect to all images on your WordPress site with Pojo Framework.
 Author:      Pojo Team
 Author URI:  http://pojo.me/
@@ -177,5 +177,4 @@ final class Pojo_Lightbox_Main {
 }
 
 Pojo_Lightbox_Main::instance();
-
 // EOF
