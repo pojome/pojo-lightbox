@@ -2,7 +2,7 @@
 /*
 Plugin Name: Pojo Lightbox
 Plugin URI:  https://github.com/pojome/pojo-lightbox
-Version:     2.0.3
+Version:     2.0.4
 Description: This plugin used to add the lightbox (overlay) effect to all images on your WordPress site with Pojo Framework.
 Author:      Pojo Team
 Author URI:  http://pojo.me/
@@ -71,8 +71,8 @@ final class Pojo_Lightbox_Main {
 			wp_register_script( 'jquery.magnific-popup', POJO_LIGHTBOX_ASSETS_URL . 'magnific-popup/jquery.magnific-popup.min.js', array( 'jquery' ), '1.0.0', true );
 			wp_enqueue_script( 'jquery.magnific-popup' );
 		} elseif ( 'photoswipe' === $lightbox_script ) {
-			wp_enqueue_style( 'photoswipe', POJO_LIGHTBOX_ASSETS_URL . 'photoswipe/photoswipe.css' );
-			wp_enqueue_style( 'photoswipe-skin', POJO_LIGHTBOX_ASSETS_URL . 'photoswipe/default-skin/default-skin.css' );
+			wp_enqueue_style( 'photoswipe', POJO_LIGHTBOX_ASSETS_URL . 'photoswipe/photoswipe.min.css' );
+			wp_enqueue_style( 'photoswipe-skin', POJO_LIGHTBOX_ASSETS_URL . 'photoswipe/default-skin/default-skin.min.css' );
 
 			wp_register_script( 'photoswipe', POJO_LIGHTBOX_ASSETS_URL . 'photoswipe/photoswipe.min.js', array( 'jquery' ), '4.0.7', true );
 			wp_register_script( 'photoswipe-ui', POJO_LIGHTBOX_ASSETS_URL . 'photoswipe/photoswipe-ui-default.min.js', array( 'jquery' ), '4.0.7', true );

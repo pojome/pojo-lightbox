@@ -1,11 +1,11 @@
 # Pojo Lightbox #
-[![Dependency Status](https://david-dm.org/pojome/pojo-lightbox/dev-status.svg)](https://david-dm.org/pojome/pojo-lightbox#info=devDependencies) [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
+[![Dependency Status](https://david-dm.org/pojome/pojo-lightbox/dev-status.svg)](https://david-dm.org/pojome/pojo-lightbox#info=devDependencies) [![Built with Grunt](https://cdn.gruntjs.com/builtwith.svg)](http://gruntjs.com/)
 
 **Contributors:** pojo.me, KingYes, ariel.k  
 **Tags:** lightbox, image, allery, images, jquery, media, modal, overlay, prettyphoto, slideshow, PrettyPhoto,  
 **Requires at least:** 3.5  
 **Tested up to:** 4.5  
-**Stable tag:** 2.0.3  
+**Stable tag:** 2.0.4  
 **License:** GPLv2 or later  
 
 This plugin used to add the lightbox (overlay) effect to all images on your WordPress site with Pojo Framework.
@@ -53,6 +53,9 @@ Would you like to like to contribute to Pojo Lightbox? You are more than welcome
 <ol>
 
 ## Changelog ##
+
+### 2.0.4 ###
+* Tweak! - Added minify styles for PhotoSwipe lightbox
 
 ### 2.0.3 ###
 * Tweak! - Update photoswipe plugin 
