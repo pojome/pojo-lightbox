@@ -28,7 +28,7 @@ A simple plugin to conveniently add [PhotoSwipe lightbox](http://photoswipe.com/
 
 ### Contributions ###
 
-Would you like to like to contribute to Pojo Lightbox? You are more than welcome to submit your pull requests to the [GitHub repo](https://github.com/pojome/pojo-lightbox). Also, if you have any notes about the code, please open a ticket on this issue tracker.
+Would you like to like to contribute to Pojo Lightbox? You are more than welcome to submit your pull requests to our [GitHub repo](https://github.com/pojome/pojo-lightbox). Also, if you have any notes about the code, please open a ticket on this issue tracker.
 
 ## Installation ##
 
