@@ -4,7 +4,7 @@
 **Contributors:** pojo.me, KingYes, ariel.k  
 **Tags:** lightbox, image, allery, images, jquery, media, modal, overlay, prettyphoto, slideshow, PrettyPhoto,  
 **Requires at least:** 3.5  
-**Tested up to:** 4.5  
+**Tested up to:** 4.7  
 **Stable tag:** 2.0.4  
 **License:** GPLv2 or later  
 
@@ -53,6 +53,10 @@ Would you like to like to contribute to Pojo Lightbox? You are more than welcome
 <ol>
 
 ## Changelog ##
+
+### 2.0.5 ###
+* Tweak! - Update PhotoSwipe to v4.1.1
+* Fix! - Allow YouTube/Vimeo in HTTPS environment in prettyPhoto lightbox
 
 ### 2.0.4 ###
 * Tweak! - Added minify styles for PhotoSwipe lightbox
