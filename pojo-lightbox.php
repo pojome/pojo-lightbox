@@ -74,8 +74,8 @@ final class Pojo_Lightbox_Main {
 			wp_enqueue_style( 'photoswipe', POJO_LIGHTBOX_ASSETS_URL . 'photoswipe/photoswipe.min.css' );
 			wp_enqueue_style( 'photoswipe-skin', POJO_LIGHTBOX_ASSETS_URL . 'photoswipe/default-skin/default-skin.min.css' );
 
-			wp_register_script( 'photoswipe', POJO_LIGHTBOX_ASSETS_URL . 'photoswipe/photoswipe.min.js', array( 'jquery' ), '4.0.7', true );
-			wp_register_script( 'photoswipe-ui', POJO_LIGHTBOX_ASSETS_URL . 'photoswipe/photoswipe-ui-default.min.js', array( 'jquery' ), '4.0.7', true );
+			wp_register_script( 'photoswipe', POJO_LIGHTBOX_ASSETS_URL . 'photoswipe/photoswipe.min.js', array( 'jquery' ), '4.1.1', true );
+			wp_register_script( 'photoswipe-ui', POJO_LIGHTBOX_ASSETS_URL . 'photoswipe/photoswipe-ui-default.min.js', array( 'jquery' ), '4.1.1', true );
 			wp_enqueue_script( 'photoswipe' );
 			wp_enqueue_script( 'photoswipe-ui' );
 		}

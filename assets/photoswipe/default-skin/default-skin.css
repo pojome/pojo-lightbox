@@ -482,23 +482,25 @@ a.pswp__share--download:hover {
 .pswp--minimal--dark .pswp__top-bar {
   background: none; }
 
-
 /**
-* Custom Codes
+* Pojo Custom Codes
 */
 .pswp {
-  z-index: 100000;
+	z-index: 100000;
 }
 
 .pswp .pswp__caption__center {
-  text-align: center;
+	text-align: center;
 }
 
 .pswp .pswp__button:hover,
 .pswp .pswp__button:focus {
-  background-color: transparent !important;
+	background-color: transparent !important;
 }
 
 .pswp .pswp__share--download {
-  display: none;
+	display: none;
 }
+/**
+* End Pojo Custom Codes
+*/
