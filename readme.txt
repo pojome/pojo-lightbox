@@ -52,6 +52,9 @@ Would you like to like to contribute to Pojo Lightbox? You are more than welcome
 
 == Changelog ==
 
+= 2.0.6 =
+* Tweak! - Update PhotoSwipe to v4.1.2
+
 = 2.0.5 =
 * Tweak! - Update PhotoSwipe to v4.1.1
 * Fix! - Allow YouTube/Vimeo in HTTPS environment in prettyPhoto lightbox
