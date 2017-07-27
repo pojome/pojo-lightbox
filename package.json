@@ -3,7 +3,7 @@
 	"slug": "pojo-lightbox",
 	"homepage": "http://pojo.me/",
 	"description": "",
-	"version": "2.0.6",
+	"version": "2.0.7",
 	"devDependencies": {
 		"grunt": "~1.0.1",
 		"grunt-checktextdomain": "~1.0.1",
