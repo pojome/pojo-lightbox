@@ -12,7 +12,14 @@
 			$window: $( window )
 		},
 
-		cacheElements: function() {},
+		cacheElements: function() {
+			var elementorLightbox = false;
+			if ( window.elementorFrontend && elementorFrontend.getGeneralSettings ) {
+				elementorLightbox = 'yes' === elementorFrontend.getGeneralSettings( 'elementor_global_image_lightbox' );
+			}
+
+			this.cache.elementorLightbox = elementorLightbox;
+		},
 
 		buildElements: function() {},
 
@@ -34,20 +41,23 @@
 
 		// Bind for prettyPhoto
 		_bindEventsPrettyPhoto: function() {
-			var isMobile = Modernizr.mq( 'only screen and (max-width: 600px)' );
+			var self = this, isMobile = Modernizr.mq( 'only screen and (max-width: 600px)' );
 			
 			if ( 'disable' !== PojoLightboxOptions.smartphone || ! isMobile ) {
 				if ( isMobile ) {
 					PojoLightboxOptions.lightbox_args.allow_expand = false;
 				}
-				var lightbox_single_args = PojoLightboxOptions.lightbox_args,
-					$body;
-				
+				var lightbox_single_args = PojoLightboxOptions.lightbox_args, $body, notScopes = '';
+
 				if ( 'disable' === PojoLightboxOptions.woocommerce ) {
-					$body = $( 'body:not(.woocommerce)' );
-				} else {
-					$body = $( 'body' );
+					notScopes += ':not(.woocommerce)';
 				}
+
+				if ( self.cache.elementorLightbox ) {
+					notScopes += ':not(.elementor-page)';
+				}
+
+				$body = $( 'body' + notScopes );
 
 				$( 'a', $body )
 					.filter( function() {
@@ -63,13 +73,17 @@
 
 		// Bind for Magnific Popup
 		_bindEventsMagnificPopup: function() {
-			var $body;
-			
+			var self = this, $body, notScopes = '';
+
 			if ( 'disable' === PojoLightboxOptions.woocommerce ) {
-				$body = $( 'body:not(.woocommerce)' );
-			} else {
-				$body = $( 'body' );
+				notScopes += ':not(.woocommerce)';
 			}
+
+			if ( self.cache.elementorLightbox ) {
+				notScopes += ':not(.elementor-page)';
+			}
+
+			$body = $( 'body' + notScopes );
 
 			$( 'a', $body )
 				.filter( function() {
@@ -98,7 +112,8 @@
 
 		// Bind for Photo Swipe
 		_bindEventsPhotoSwipe: function() {
-			var $photosWipeTemplate = $('.pswp')[0],
+			var self = this,
+				$photosWipeTemplate = $('.pswp')[0],
 				globalOptions = PojoLightboxOptions.lightbox_args;
 			
 			var _parseItemOptionsFromSelector = function( $this ) {
@@ -154,13 +169,17 @@
 				};
 			
 			// Single Images
-			var $body;
+			var $body, notScopes = '';
 
 			if ( 'disable' === PojoLightboxOptions.woocommerce ) {
-				$body = $( 'body:not(.woocommerce)' );
-			} else {
-				$body = $( 'body' );
+				notScopes += ':not(.woocommerce)';
 			}
+
+			if ( self.cache.elementorLightbox ) {
+				notScopes += ':not(.elementor-page)';
+			}
+
+			$body = $( 'body' + notScopes );
 
 			var $singleImages = $( 'a', $body )
 				.filter( function() {
