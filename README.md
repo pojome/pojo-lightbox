@@ -1,7 +1,7 @@
-# Pojo Lightbox #
-[![Dependency Status](https://david-dm.org/pojome/pojo-lightbox/dev-status.svg)](https://david-dm.org/pojome/pojo-lightbox#info=devDependencies) [![Built with Grunt](https://cdn.gruntjs.com/builtwith.svg)](http://gruntjs.com/)
+# Pojo Lightbox [![Dependency Status](https://david-dm.org/pojome/pojo-lightbox/dev-status.svg)](https://david-dm.org/pojome/pojo-lightbox#info=devDependencies) [![Built with Grunt](https://cdn.gruntjs.com/builtwith.svg)](http://gruntjs.com/)
 
-**Contributors:** pojo.me, KingYes, ariel.k  
+
+**Contributors:** [pojo.me](https://profiles.wordpress.org/pojo.me), [KingYes](https://profiles.wordpress.org/KingYes), [ariel.k](https://profiles.wordpress.org/ariel.k)  
 **Tags:** lightbox, image, allery, images, jquery, media, modal, overlay, prettyphoto, slideshow, PrettyPhoto,  
 **Requires at least:** 3.5  
 **Tested up to:** 4.8  
