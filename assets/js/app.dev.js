@@ -218,7 +218,7 @@
 			} );
 			
 			// WordPress Gallery
-			$( 'div.gallery, div.pojo-gallery' ).each( function() {
+			$( 'div.gallery, div.pojo-gallery', $body ).each( function() {
 				var $thisGallery = $( this ),
 					
 					_getItems = function() {
