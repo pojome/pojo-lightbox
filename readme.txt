@@ -2,7 +2,7 @@
 Contributors: pojo.me, KingYes, ariel.k
 Tags: lightbox, image, allery, images, jquery, media, modal, overlay, prettyphoto, slideshow, PrettyPhoto,
 Requires at least: 3.5
-Tested up to: 6.1
+Tested up to: 6.3
 Stable tag: 2.0.8
 License: GPLv2 or later
 
@@ -69,7 +69,7 @@ Would you like to like to contribute to Pojo Lightbox? You are more than welcome
 * Tweak! - Added minify styles for PhotoSwipe lightbox
 
 = 2.0.3 =
-* Tweak! - Update photoswipe plugin 
+* Tweak! - Update photoswipe plugin
 
 = 2.0.2 =
 * Fixes! - For hebrew dashboard
